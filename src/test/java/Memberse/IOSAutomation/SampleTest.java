@@ -7,7 +7,7 @@ import IOSPageObjects.SamplePage;
 public class SampleTest extends IBase {
     
   @Test
-  public void shouldAnswerWithTrue() {
+  public void SampleTestCase() {
 	  SamplePage sp = new SamplePage(driver);	
 	  sp.AlertViewsButton().click();
 	 

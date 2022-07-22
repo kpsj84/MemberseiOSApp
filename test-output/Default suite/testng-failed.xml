@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Memberse.IOSAutomation.SampleTest2">
+      <class name="Memberse.IOSAutomation.TestApp2">
         <methods>
-          <include name="shouldAnswerWithTrue2"/>
           <include name="quitDriver"/>
           <include name="startService"/>
           <include name="beforeMethod"/>
           <include name="startDriver"/>
           <include name="stopService"/>
           <include name="afterMethod"/>
+          <include name="TestApp2Case"/>
         </methods>
-      </class> <!-- Memberse.IOSAutomation.SampleTest2 -->
+      </class> <!-- Memberse.IOSAutomation.TestApp2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -87,20 +87,20 @@ public class IBase {
 			else if(MemberseCS == true) 
 			{	
 				//For CS Server, Active following path of Emulator and uses the same UDID if the Xcode version is same
-				Runtime.getRuntime().exec("open -a Xcode");
-				Runtime.getRuntime().exec("open -a Simulator --args -CurrentDeviceUDID CD48D4E0-0240-4E1D-97EC-DDDD05BB0052");
+				Runtime.getRuntime().exec("open -a Simulator --args -CurrentDeviceUDID C1F0A116-CC95-4AD1-9022-C222B2D8D570");
 				System.out.println("Simulator is running on CS Soft Server");
 			}
 			else 
 			{
 				//Path to run test on local machine
-				Runtime.getRuntime().exec("open -a Xcode");
-				Runtime.getRuntime().exec("open -a Simulator --args -CurrentDeviceUDID CD48D4E0-0240-4E1D-97EC-DDDD05BB0052");
+				//Runtime.getRuntime().exec("open -a Xcode");
+				//Runtime.getRuntime().exec("open -a Simulator --args -CurrentDeviceUDID C1F0A116-CC95-4AD1-9022-C222B2D8D570");
+				Runtime.getRuntime().exec("open -a Simulator --args -CurrentDeviceUDID 5CCC7ABE-5393-477D-9793-AD42F0EE2D5D");
 				System.out.println("Simulator is running on Local Machine");
 			}
 		}
 		
-		//Set Capabilities for IOS driver and get the appName from Iglobal.properties file, pass appName here from Test Class (here coming from @BeforeTest Annotation) & name of String Argument can be different in this Method and in Test Class
+		//Set Capabilities for IOS driver and get the appName from Iglobal.properties file, pass appName from Test Class (here coming from @BeforeTest Annotation) & name of String Argument can be different in this Method and in Test Class
 		public static void capabilities(String appName) throws IOException, InterruptedException {		
 			//Path for global properties file
 			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/Memberse/IOSAutomation/Iglobal.properties");
@@ -130,23 +130,27 @@ public class IBase {
 				cap.setCapability("xcodeOrgId", "Kamalpreet Singh (Personal Team)"); 				//Provide here Team ID which get by subscribing developer a/c or from team
 				cap.setCapability("xcodeSigningId", "iPhone Developer"); 							//static
 				cap.setCapability("udid", "00008101-000808921AB8001E"); 							//By click on iphone name or serial number, this will show up when iphone connected to Mac via cable
-				cap.setCapability("updateWDABundlId", "io.appium.KJQA.WebDriverAgentRunner"); 		//Provide this by creating provision profile from xcode or ask from team
+				cap.setCapability("updateWDABundlId", "io.appium.KamalQA.WebDriverAgentRunner"); 		//Provide this by creating provision profile from xcode or ask from team
 			}
 			else
 			{
 				cap.setCapability(MobileCapabilityType.DEVICE_NAME, device);						//Get Device Name from Iglobal.properties file
 			}
 			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
-			cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.4");
+			cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.5");
 			cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());						//Get Application Path
 			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//Set Android Automator to perform action in application
 			cap.setCapability("chromedriverExecutable", chromeDriver);								//Get the Path of Chrome Driver
 			cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 180); 						//Set time in seconds to wait for next action, means timeout
 			cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 300000); 						//30 secs
 			//cap.setCapability("commandTimeouts", 10000); 											// this is to give times for scrolling & other things
+			cap.setCapability("waitForQuiescence", false);
+			cap.setCapability("wdaEventloopIdleDelay", 3);											
+			cap.setCapability("eventLoopIdleDelaySec", 1);
+			//cap.setCapability("useNewWDA", false);
 		}
 		
-		//Set Capabilities for IOS driver and get the appName from Iglobal.properties file, pass appName here from Test Class (here coming from @BeforeTest Annotation) & name of String Argument can be different in this Method and in Test Class
+		//Set Capabilities for IOS driver and get the appName from Iglobal.properties file, pass appName from Test Class (here coming from @BeforeTest Annotation) & name of String Argument can be different in this Method and in Test Class
 			public static void cloudCapabilities(String appName) throws IOException, InterruptedException{		
 				//This method called just to print the message written in startEmulator()
 				startEmulator();
@@ -162,7 +166,7 @@ public class IBase {
 				//cap.setCapability("app", "bs://0e40e8d451b489c4c75e85492af9c8e94a6edbee");			//Browserstack uploaded App reference for sample App
 				cap.setCapability("custom_id", "MemberseAppQA");										//Custom Id for App which remains the same for all build uploads if app ref. not change on every upload
 				cap.setCapability("device", "iPhone 13 Pro");											//Browserstack Simulator Name
-				cap.setCapability("os_version", "15.4");												//Browserstack Simulator OS info
+				cap.setCapability("os_version", "15.5");												//Browserstack Simulator OS info
 				cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//Bowserstack Type of Automation Ref.
 				cap.setCapability("chromedriverExecutable", chromeDriver);	
 				cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 180); 
