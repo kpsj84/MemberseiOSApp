@@ -30,7 +30,7 @@ public class IBase {
 	//Flags use to run Test on different Environment, make it true at where to run
 		public static boolean sampleTest    = false;
 		public static boolean MemberseReal  = false;
-		public static boolean MemberseCloud = false;
+		public static boolean MemberseCloud = true;
 		public static boolean MemberseCS    = false;
 	
 	//Initiate IOS Driver, Appium Driver Service & Desired Capabilities
