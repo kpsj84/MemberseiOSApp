@@ -10,7 +10,7 @@
     <!-- Give Reference to Test Classes-->
   		<test thread-count="5" name="Test">
     		<classes>
-      			<class name="Memberse.IOSAutomation.TestApp2"/>
+      			<class name="Memberse.IOSAutomation.iWidgetSwipeTest"/>
     </classes>
   </test> <!-- Test -->
   

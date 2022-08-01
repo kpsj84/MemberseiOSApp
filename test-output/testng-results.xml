@@ -2,40 +2,40 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-22T22:37:11 IST" name="Suite" finished-at="2022-07-22T22:38:30 IST" duration-ms="78486">
+  <suite started-at="2022-08-01T18:48:10 IST" name="Suite" finished-at="2022-08-01T18:49:24 IST" duration-ms="73578">
     <groups>
     </groups>
-    <test started-at="2022-07-22T22:37:11 IST" name="Test" finished-at="2022-07-22T22:38:30 IST" duration-ms="78486">
-      <class name="Memberse.IOSAutomation.TestApp2">
-        <test-method is-config="true" signature="startService()[pri:0, instance:Memberse.IOSAutomation.TestApp2@71238fc2]" started-at="2022-07-22T22:37:11 IST" name="startService" finished-at="2022-07-22T22:37:13 IST" duration-ms="1408" status="PASS">
+    <test started-at="2022-08-01T18:48:10 IST" name="Test" finished-at="2022-08-01T18:49:24 IST" duration-ms="73578">
+      <class name="Memberse.IOSAutomation.iWidgetSwipeTest">
+        <test-method is-config="true" signature="startService()[pri:0, instance:Memberse.IOSAutomation.iWidgetSwipeTest@71238fc2]" started-at="2022-08-01T18:48:10 IST" name="startService" finished-at="2022-08-01T18:48:12 IST" duration-ms="2065" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startService -->
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:Memberse.IOSAutomation.TestApp2@71238fc2]" started-at="2022-07-22T22:37:13 IST" name="startDriver" finished-at="2022-07-22T22:37:21 IST" duration-ms="8204" status="PASS">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:Memberse.IOSAutomation.iWidgetSwipeTest@71238fc2]" started-at="2022-08-01T18:48:12 IST" name="startDriver" finished-at="2022-08-01T18:49:10 IST" duration-ms="58061" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Memberse.IOSAutomation.TestApp2@71238fc2]" started-at="2022-07-22T22:37:21 IST" name="beforeMethod" finished-at="2022-07-22T22:37:21 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Memberse.IOSAutomation.iWidgetSwipeTest@71238fc2]" started-at="2022-08-01T18:49:10 IST" name="beforeMethod" finished-at="2022-08-01T18:49:10 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TestApp2Case()[pri:0, instance:Memberse.IOSAutomation.TestApp2@71238fc2]" started-at="2022-07-22T22:37:21 IST" name="TestApp2Case" finished-at="2022-07-22T22:37:29 IST" duration-ms="7719" status="PASS">
+        <test-method signature="iWidgetSwipeTestCase()[pri:0, instance:Memberse.IOSAutomation.iWidgetSwipeTest@71238fc2]" started-at="2022-08-01T18:49:10 IST" name="iWidgetSwipeTestCase" finished-at="2022-08-01T18:49:22 IST" duration-ms="12176" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestApp2Case -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Memberse.IOSAutomation.TestApp2@71238fc2]" started-at="2022-07-22T22:37:29 IST" name="afterMethod" finished-at="2022-07-22T22:37:29 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- iWidgetSwipeTestCase -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Memberse.IOSAutomation.iWidgetSwipeTest@71238fc2]" started-at="2022-08-01T18:49:22 IST" name="afterMethod" finished-at="2022-08-01T18:49:22 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Memberse.IOSAutomation.TestApp2@71238fc2]" started-at="2022-07-22T22:37:29 IST" name="quitDriver" finished-at="2022-07-22T22:37:30 IST" duration-ms="1053" status="PASS">
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Memberse.IOSAutomation.iWidgetSwipeTest@71238fc2]" started-at="2022-08-01T18:49:22 IST" name="quitDriver" finished-at="2022-08-01T18:49:23 IST" duration-ms="1103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-        <test-method is-config="true" signature="stopService()[pri:0, instance:Memberse.IOSAutomation.TestApp2@71238fc2]" started-at="2022-07-22T22:37:30 IST" name="stopService" finished-at="2022-07-22T22:38:30 IST" duration-ms="60057" status="PASS">
+        <test-method is-config="true" signature="stopService()[pri:0, instance:Memberse.IOSAutomation.iWidgetSwipeTest@71238fc2]" started-at="2022-08-01T18:49:23 IST" name="stopService" finished-at="2022-08-01T18:49:24 IST" duration-ms="143" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopService -->
-      </class> <!-- Memberse.IOSAutomation.TestApp2 -->
+      </class> <!-- Memberse.IOSAutomation.iWidgetSwipeTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

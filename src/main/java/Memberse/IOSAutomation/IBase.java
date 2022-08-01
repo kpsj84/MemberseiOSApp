@@ -27,7 +27,7 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class IBase {
 	
-	//Flags use to run Test on different Environment, make it true at where to run
+	//Flags use to run Test on different Environment, make it true for where to run. (Testing app on Simulator is not yet working due to signing Profile matter)
 		public static boolean sampleTest    = false;
 		public static boolean MemberseReal  = false;
 		public static boolean MemberseCloud = true;
@@ -78,7 +78,7 @@ public class IBase {
 		public static void startEmulator() throws IOException, InterruptedException {		
 			if(MemberseReal == true)
 			{
-				System.out.println("Test are running on Real device");
+				System.out.println("Test's are running on Real device");
 			}
 			else if(MemberseCloud == true)
 			{
@@ -86,16 +86,15 @@ public class IBase {
 			}
 			else if(MemberseCS == true) 
 			{	
-				//For CS Server, Active following path of Emulator and uses the same UDID if the Xcode version is same
+				//For CS Server, Active following path of Simulator and uses the same UDID if the Xcode version is same
 				Runtime.getRuntime().exec("open -a Simulator --args -CurrentDeviceUDID C1F0A116-CC95-4AD1-9022-C222B2D8D570");
 				System.out.println("Simulator is running on CS Soft Server");
 			}
 			else 
 			{
-				//Path to run test on local machine
-				//Runtime.getRuntime().exec("open -a Xcode");
-				//Runtime.getRuntime().exec("open -a Simulator --args -CurrentDeviceUDID C1F0A116-CC95-4AD1-9022-C222B2D8D570");
-				Runtime.getRuntime().exec("open -a Simulator --args -CurrentDeviceUDID 5CCC7ABE-5393-477D-9793-AD42F0EE2D5D");
+				//Path to run test on local machine on Simulator
+				Runtime.getRuntime().exec("open -a Simulator --args -CurrentDeviceUDID 5CCC7ABE-5393-477D-9793-AD42F0EE2D5D"); 		//iPhone 13 Pro
+			  //Runtime.getRuntime().exec("open -a Simulator --args -CurrentDeviceUDID 82E9C914-0D91-4B7F-AEB4-071DAA2739F5");		//iPhone 12 Mini
 				System.out.println("Simulator is running on Local Machine");
 			}
 		}
@@ -112,9 +111,9 @@ public class IBase {
 			File appDir = new File("src/Application");
 			File app = new File(appDir, (String)prop.get(appName)); //Assign application file Directory & get appName from Properties class object 
 			
-			//Device name given in global.properties file
+			//Device name given in Iglobal.properties file
 			String device = (String)prop.get("deviceName");
-			if(device.contains("iPhone"))		//Start Emulator
+			if(device.contains("iPhone"))			//Start Emulator
 			{
 				startEmulator();
 			}
@@ -126,11 +125,11 @@ public class IBase {
 			cap = new DesiredCapabilities();
 			if(MemberseReal == true)
 			{
-				cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone");						//Keyword used to run test on real device	
-				cap.setCapability("xcodeOrgId", "Kamalpreet Singh (Personal Team)"); 				//Provide here Team ID which get by subscribing developer a/c or from team
-				cap.setCapability("xcodeSigningId", "iPhone Developer"); 							//static
-				cap.setCapability("udid", "00008101-000808921AB8001E"); 							//By click on iphone name or serial number, this will show up when iphone connected to Mac via cable
-				cap.setCapability("updateWDABundlId", "io.appium.KamalQA.WebDriverAgentRunner"); 		//Provide this by creating provision profile from xcode or ask from team
+				cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone");			//Keyword used to run test on real device	
+				cap.setCapability("xcodeOrgId", "CGYHFCCU8D"); 							//Provide here Team ID which get by subscribing developer a/c or from team
+				cap.setCapability("xcodeSigningId", "iPhone Developer"); 				//static
+				cap.setCapability("udid", "00008101-000808921AB8001E"); 				//By click on iphone name or serial number in Finder, this will show up when iphone connected to Mac via cable
+				cap.setCapability("updateWDABundlId", "dog.fa.so.app"); 				//Provide this by creating provision profile from xcode or ask from team
 			}
 			else
 			{
@@ -139,15 +138,17 @@ public class IBase {
 			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
 			cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.5");
 			cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());						//Get Application Path
-			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//Set Android Automator to perform action in application
+			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//Set XCUIT to perform action in application
 			cap.setCapability("chromedriverExecutable", chromeDriver);								//Get the Path of Chrome Driver
 			cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 180); 						//Set time in seconds to wait for next action, means timeout
-			cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 300000); 						//30 secs
+			cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 200000); 						//20 secs, This is application Launch time
 			//cap.setCapability("commandTimeouts", 10000); 											// this is to give times for scrolling & other things
-			cap.setCapability("waitForQuiescence", false);
-			cap.setCapability("wdaEventloopIdleDelay", 3);											
-			cap.setCapability("eventLoopIdleDelaySec", 1);
+			//cap.setCapability("waitForQuiescence", false);
+			//cap.setCapability("wdaEventloopIdleDelay", 3);											
+			//cap.setCapability("eventLoopIdleDelaySec", 1);
 			//cap.setCapability("useNewWDA", false);
+			//cap.setCapability("wdaStartupRetries", "4");
+			//cap.setCapability("iosInstallPause","8000" );
 		}
 		
 		//Set Capabilities for IOS driver and get the appName from Iglobal.properties file, pass appName from Test Class (here coming from @BeforeTest Annotation) & name of String Argument can be different in this Method and in Test Class
@@ -162,16 +163,15 @@ public class IBase {
 				cap = new DesiredCapabilities();
 				cap.setCapability("browserstack.user", "kamal_BOZ8Ie");									//Browserstack User Key
 				cap.setCapability("browserstack.key", "FJzpiZvMvStzQQNzQHdD");							//Browserstack Password Key
-				cap.setCapability("app", "bs://0e40e8d451b489c4c75e85492af9c8e94a6edbee");				//Browserstack uploaded App reference
+				cap.setCapability("app", "bs://7e9ec9711af030d385b82a743369a79f2df69177");				//Browserstack uploaded App reference
 				//cap.setCapability("app", "bs://0e40e8d451b489c4c75e85492af9c8e94a6edbee");			//Browserstack uploaded App reference for sample App
 				cap.setCapability("custom_id", "MemberseAppQA");										//Custom Id for App which remains the same for all build uploads if app ref. not change on every upload
 				cap.setCapability("device", "iPhone 13 Pro");											//Browserstack Simulator Name
 				cap.setCapability("os_version", "15.5");												//Browserstack Simulator OS info
-				cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//Bowserstack Type of Automation Ref.
+				cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//Bowserstack Type of Automation Reference
 				cap.setCapability("chromedriverExecutable", chromeDriver);	
 				cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 180); 
-				cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 300000); 						//30 secs
-				//cap.setCapability("commandTimeouts", 10000); 
+				cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 200000);
 			}
 		
 		@BeforeTest
@@ -188,7 +188,7 @@ public class IBase {
 				service=startServer();
 			}
 			
-			//Launch the desired Application by fetching the appName from Global Properties according which is according to string argument passed
+			//Launch the desired Application by fetching the appName from Global Properties which is according to string argument passed
 			if(sampleTest == true) 
 			{
 				capabilities("sampleApp");	

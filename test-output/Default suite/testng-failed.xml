@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Memberse.IOSAutomation.TestApp2">
+      <class name="Memberse.IOSAutomation.iWidgetSwipeTest">
         <methods>
           <include name="quitDriver"/>
           <include name="startService"/>
           <include name="beforeMethod"/>
           <include name="startDriver"/>
           <include name="stopService"/>
+          <include name="iWidgetSwipeTestCase"/>
           <include name="afterMethod"/>
-          <include name="TestApp2Case"/>
         </methods>
-      </class> <!-- Memberse.IOSAutomation.TestApp2 -->
+      </class> <!-- Memberse.IOSAutomation.iWidgetSwipeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
