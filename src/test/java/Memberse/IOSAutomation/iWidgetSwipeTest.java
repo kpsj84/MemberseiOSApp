@@ -34,6 +34,12 @@ public class iWidgetSwipeTest extends IBase {
 			System.out.println(Text);
 			//Verify the Maybe later available on Login Option Page
 			Assert.assertEquals(Text, "Login");
+			
+			driver.findElementByIosClassChain("**/XCUIElementTypeTextField[`value == \"Email\"`]").sendKeys("kqacd@yopmail.com");
+			driver.findElementByIosClassChain("**/XCUIElementTypeSecureTextField[`value == \"Password\"`]").sendKeys("kqacd");
+			
+			driver.findElementByIosClassChain("**/XCUIElementTypeOther[`label == \"Login\"`]").click();
+			
 		}
 
 }
