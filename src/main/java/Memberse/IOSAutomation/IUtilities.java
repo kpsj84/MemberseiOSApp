@@ -78,14 +78,14 @@ public class IUtilities {
 		        System.err.println("swipeScreen(): TouchAction FAILED\n" + e.getMessage());
 		        return;
 		    }
-		    // always allow swipe action to complete
+		    //always allow swipe action to complete
 		    try 
 		    {
 		        Thread.sleep(ANIMATION_TIME);
 		    } 
 		    catch (InterruptedException e) 
 		    {
-		        // ignore
+		        //ignore
 		    }
 		}
 

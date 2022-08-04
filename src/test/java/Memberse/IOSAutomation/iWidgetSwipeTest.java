@@ -39,6 +39,17 @@ public class iWidgetSwipeTest extends IBase {
 			driver.findElementByIosClassChain("**/XCUIElementTypeSecureTextField[`value == \"Password\"`]").sendKeys("kqacd");
 			
 			driver.findElementByIosClassChain("**/XCUIElementTypeOther[`label == \"Login\"`]").click();
+			Thread.sleep(10000);
+			driver.findElementByIosClassChain("**/XCUIElementTypeTabBar[`label == \"Tab Bar\"`]/XCUIElementTypeButton[2]").click();
+			Thread.sleep(4000);
+			driver.findElementByIosClassChain("**/XCUIElementTypeStaticText[`label == \"Search for Creators...\"`]").sendKeys("kqacd");
+			Thread.sleep(4000);
+			driver.findElementByIosClassChain("**/XCUIElementTypeTabBar[`label == \"Tab Bar\"`]/XCUIElementTypeButton[4]").click();
+			Thread.sleep(4000);
+			System.out.println("Demo Test is completed");
+			Thread.sleep(4000);
+			
+			
 			
 		}
 

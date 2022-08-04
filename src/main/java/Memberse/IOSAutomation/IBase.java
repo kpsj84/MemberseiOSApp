@@ -34,9 +34,9 @@ public class IBase {
 		public static boolean MemberseCS    = false;
 	
 	//Initiate IOS Driver, Appium Driver Service & Desired Capabilities
-		public static IOSDriver<IOSElement> driver;
-		public static AppiumDriverLocalService service;
-		public static DesiredCapabilities cap;
+		public static IOSDriver<IOSElement> 	driver;
+		public static AppiumDriverLocalService 	service;
+		public static DesiredCapabilities 		cap;
 		
 	//Starts the Appium Server by checking that Server is already running or not, by calling other Method
 		public AppiumDriverLocalService startServer() {
@@ -92,7 +92,7 @@ public class IBase {
 			}
 			else 
 			{
-				//Path to run test on local machine on Simulator
+				//Path to run test on local machine Simulator
 				Runtime.getRuntime().exec("open -a Simulator --args -CurrentDeviceUDID 5CCC7ABE-5393-477D-9793-AD42F0EE2D5D"); 		//iPhone 13 Pro
 			  //Runtime.getRuntime().exec("open -a Simulator --args -CurrentDeviceUDID 82E9C914-0D91-4B7F-AEB4-071DAA2739F5");		//iPhone 12 Mini
 				System.out.println("Simulator is running on Local Machine");
@@ -104,21 +104,21 @@ public class IBase {
 			//Path for global properties file
 			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/Memberse/IOSAutomation/Iglobal.properties");
 			
-			Properties prop = new Properties();		//Create object of Properties class  
-			prop.load(fis);							//Load global.properties file
+			Properties prop = new Properties();						//Create object of Properties class  
+			prop.load(fis);											//Load global.properties file
 			
-			//Path to IOS application File folder
+			//Path to IOS Application File folder
 			File appDir = new File("src/Application");
 			File app = new File(appDir, (String)prop.get(appName)); //Assign application file Directory & get appName from Properties class object 
 			
 			//Device name given in Iglobal.properties file
 			String device = (String)prop.get("deviceName");
-			if(device.contains("iPhone"))			//Start Emulator
+			if(device.contains("iPhone"))							//Start Emulator
 			{
 				startEmulator();
 			}
 			
-			//Path of Chrome Driver for WEBVIEW on local machine
+			//Path of Chrome Driver for WEBVIEW
 			String chromeDriver = (System.getProperty("user.dir")+"/src/chromedriver/chromedriver");
 			
 			//Set Desired Capabilities
@@ -126,23 +126,23 @@ public class IBase {
 			if(MemberseReal == true)
 			{
 				cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone");			//Keyword used to run test on real device	
-				cap.setCapability("xcodeOrgId", "CGYHFCCU8D"); 							//Provide here Team ID which get by subscribing developer a/c or from team
+				cap.setCapability("xcodeOrgId", "CGYHFCCU8D"); 							//Provide here Team ID which get by subscribing for developer a/c or get from Team
 				cap.setCapability("xcodeSigningId", "iPhone Developer"); 				//static
 				cap.setCapability("udid", "00008101-000808921AB8001E"); 				//By click on iphone name or serial number in Finder, this will show up when iphone connected to Mac via cable
-				cap.setCapability("updateWDABundlId", "dog.fa.so.app"); 				//Provide this by creating provision profile from xcode or ask from team
+				cap.setCapability("updateWDABundlId", "dog.fa.so.app"); 				//Provide this by creating provision profile from Xcode or get from Team
 			}
 			else
 			{
 				cap.setCapability(MobileCapabilityType.DEVICE_NAME, device);						//Get Device Name from Iglobal.properties file
 			}
-			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
-			cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.5");
+			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");							//Set OS Name
+			cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.5");						//Set OS Version
 			cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());						//Get Application Path
 			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//Set XCUIT to perform action in application
 			cap.setCapability("chromedriverExecutable", chromeDriver);								//Get the Path of Chrome Driver
 			cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 180); 						//Set time in seconds to wait for next action, means timeout
-			cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 200000); 						//20 secs, This is application Launch time
-			//cap.setCapability("commandTimeouts", 10000); 											// this is to give times for scrolling & other things
+			cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 200000); 						//Set timeout as 20 secs, This is application Launch timeout
+			//cap.setCapability("commandTimeouts", 10000); 											//This is to set timeout for scrolling & other things
 			//cap.setCapability("waitForQuiescence", false);
 			//cap.setCapability("wdaEventloopIdleDelay", 3);											
 			//cap.setCapability("eventLoopIdleDelaySec", 1);
@@ -151,19 +151,19 @@ public class IBase {
 			//cap.setCapability("iosInstallPause","8000" );
 		}
 		
-		//Set Capabilities for IOS driver and get the appName from Iglobal.properties file, pass appName from Test Class (here coming from @BeforeTest Annotation) & name of String Argument can be different in this Method and in Test Class
+		//Set Cloud Capabilities for IOS driver and get the appName from Iglobal.properties file, pass appName from Test Class (here coming from @BeforeTest Annotation) & name of String Argument can be different in this Method and in Test Class
 			public static void cloudCapabilities(String appName) throws IOException, InterruptedException{		
 				//This method called just to print the message written in startEmulator()
 				startEmulator();
 				
-				//Path of Chrome Driver for WEBVIEW on local machine
+				//Path of Chrome Driver for WEBVIEW, It can be different depends on the version of Chrome in Device
 				String chromeDriver = (System.getProperty("user.dir")+"/src/chromedriver/chromedriver");
 				
-				//Set Desired Capabilities
+				//Set Cloud Desired Capabilities
 				cap = new DesiredCapabilities();
 				cap.setCapability("browserstack.user", "kamal_BOZ8Ie");									//Browserstack User Key
 				cap.setCapability("browserstack.key", "FJzpiZvMvStzQQNzQHdD");							//Browserstack Password Key
-				cap.setCapability("app", "bs://7e9ec9711af030d385b82a743369a79f2df69177");				//Browserstack uploaded App reference
+				cap.setCapability("app", "bs://129f338bfd3eea43ed85ff1d9f597d174e59e164");				//Browserstack uploaded App reference -> Build-24
 				//cap.setCapability("app", "bs://0e40e8d451b489c4c75e85492af9c8e94a6edbee");			//Browserstack uploaded App reference for sample App
 				cap.setCapability("custom_id", "MemberseAppQA");										//Custom Id for App which remains the same for all build uploads if app ref. not change on every upload
 				cap.setCapability("device", "iPhone 13 Pro");											//Browserstack Simulator Name
@@ -184,11 +184,11 @@ public class IBase {
 			}
 			else
 			{
-				//Starts the Server before to <test> tag execution in xml file i.e. before to all classes given in xml file
+				//Starts the Server before to <test> tag execution in testNg.xml file i.e. before to all classes given in xml file
 				service=startServer();
 			}
 			
-			//Launch the desired Application by fetching the appName from Global Properties which is according to string argument passed
+			//Launch the desired Application by fetching the appName from IGlobal Properties which is according to string argument passed
 			if(sampleTest == true) 
 			{
 				capabilities("sampleApp");	
@@ -220,7 +220,7 @@ public class IBase {
 		
 		@BeforeClass
 		public IOSDriver<IOSElement> startDriver() throws MalformedURLException {
-			System.out.println("Execute Before Class & passing capabilities to driver every time the Test's Start in New Class");
+			System.out.println("Entered Before Class & passing capabilities to driver every time the Test's Start in New Class");
 			
 			if(MemberseCloud == true)
 			{
@@ -249,12 +249,12 @@ public class IBase {
 		
 		@BeforeMethod
 		public void beforeMethod() throws IOException, InterruptedException {	
-			System.out.println("Executing Before Method, Starting Test");
+			System.out.println("Entered Before Method, Starting Test");
 		}
 		
 		@AfterMethod
 		public void afterMethod() {
-			System.out.println("Executing After Method and Confirming the Test was executed");
+			System.out.println("Entered After Method and Confirming the Test code was executed");
 		}
 
 }
