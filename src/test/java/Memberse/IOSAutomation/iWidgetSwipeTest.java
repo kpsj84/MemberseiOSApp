@@ -13,44 +13,32 @@ public class iWidgetSwipeTest extends IBase {
 			//Wait upto for next element to available and will execute immediately once element appear
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			
-			driver.findElementByAccessibilityId("Don’t Allow").click(); //abc
+			//App update Continue Button
+			driver.findElementByAccessibilityId("Don’t Allow").click();
+			System.out.println("Wait for application to load");
+			Thread.sleep(4000);
 			
 			//Create object of Utilities class for Swipe Action
 			IUtilities u = new IUtilities(driver);
-			System.out.println("Wait for application to load");
-			Thread.sleep(2000);
 			u.swipeScreen(IUtilities.Direction.LEFT);
 			System.out.println("1st Widget Swipe Executed");
 			Thread.sleep(2000);
 			u.swipeScreen(IUtilities.Direction.LEFT);
 			System.out.println("2nd Widget Swipe Executed");
 			Thread.sleep(2000);
-			u.swipeScreen(IUtilities.Direction.LEFT);
+			
+			//Next Button clicked on Widget Screen
+			driver.findElementByIosClassChain("**/XCUIElementTypeTextField[`value == 'Email'`]").click();
 			System.out.println("Last Swipe Executed");
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			System.out.println("Landing on Login Options Screen");
-			String Text = driver.findElementByXPath("//XCUIElementTypeStaticText[@name='Login']").getText();
+			String Text = driver.findElementByXPath("//android.widget.TextView[@text='Login']").getText();
 			System.out.println(Text);
-			//Verify the Maybe later available on Login Option Page
+			
+			//Verify the Text available on Login Option Page
 			Assert.assertEquals(Text, "Login");
-			
-			driver.findElementByIosClassChain("**/XCUIElementTypeTextField[`value == \"Email\"`]").sendKeys("kqacd@yopmail.com");
-			driver.findElementByIosClassChain("**/XCUIElementTypeSecureTextField[`value == \"Password\"`]").sendKeys("kqacd");
-			
-			driver.findElementByIosClassChain("**/XCUIElementTypeOther[`label == \"Login\"`]").click();
-			Thread.sleep(10000);
-			driver.findElementByIosClassChain("**/XCUIElementTypeTabBar[`label == \"Tab Bar\"`]/XCUIElementTypeButton[2]").click();
-			Thread.sleep(4000);
-			driver.findElementByIosClassChain("**/XCUIElementTypeStaticText[`label == \"Search for Creators...\"`]").sendKeys("kqacd");
-			Thread.sleep(4000);
-			driver.findElementByIosClassChain("**/XCUIElementTypeTabBar[`label == \"Tab Bar\"`]/XCUIElementTypeButton[4]").click();
-			Thread.sleep(4000);
-			System.out.println("Demo Test is completed");
-			Thread.sleep(4000);
-			
-			
-			
+			System.out.println("Swipe Action and Click Action functionality on Widgets screen are working as Expected");
 		}
 
 }
