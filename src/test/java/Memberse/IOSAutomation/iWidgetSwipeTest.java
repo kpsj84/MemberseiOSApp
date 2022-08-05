@@ -13,7 +13,7 @@ public class iWidgetSwipeTest extends IBase {
 			//Wait upto for next element to available and will execute immediately once element appear
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			
-			driver.findElementByAccessibilityId("Don’t Allow").click();
+			driver.findElementByAccessibilityId("Don’t Allow").click(); //abc
 			
 			//Create object of Utilities class for Swipe Action
 			IUtilities u = new IUtilities(driver);
