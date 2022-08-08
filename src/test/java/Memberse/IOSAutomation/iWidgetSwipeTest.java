@@ -16,7 +16,7 @@ public class iWidgetSwipeTest extends IBase {
 			//App update Continue Button
 			driver.findElementByAccessibilityId("Don’t Allow").click();
 			System.out.println("Wait for application to load");
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 			
 			//Create object of Utilities class for Swipe Action
 			IUtilities u = new IUtilities(driver);
@@ -27,13 +27,13 @@ public class iWidgetSwipeTest extends IBase {
 			System.out.println("2nd Widget Swipe Executed");
 			Thread.sleep(2000);
 			
-			//Next Button clicked on Widget Screen
-			driver.findElementByIosClassChain("**/XCUIElementTypeTextField[`value == 'Email'`]").click();
+			//Skip Button clicked on Widget Screen
+			driver.findElementByXPath("(//XCUIElementTypeOther[@name=\"Skip\"])[4]").click();
 			System.out.println("Last Swipe Executed");
-			Thread.sleep(4000);
+			Thread.sleep(2000);
 			
 			System.out.println("Landing on Login Options Screen");
-			String Text = driver.findElementByXPath("//android.widget.TextView[@text='Login']").getText();
+			String Text = driver.findElementByXPath("//XCUIElementTypeStaticText[@name='Login']").getText();
 			System.out.println(Text);
 			
 			//Verify the Text available on Login Option Page
