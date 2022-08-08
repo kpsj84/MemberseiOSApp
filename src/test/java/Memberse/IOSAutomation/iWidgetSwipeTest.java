@@ -16,7 +16,7 @@ public class iWidgetSwipeTest extends IBase {
 			//App update Continue Button
 			driver.findElementByAccessibilityId("Don’t Allow").click();
 			System.out.println("Wait for application to load");
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 			
 			//Create object of Utilities class for Swipe Action
 			IUtilities u = new IUtilities(driver);
