@@ -38,7 +38,7 @@ public class iWidgetSwipeTest extends IBase {
 			
 			//Verify the Text available on Login Option Page
 			Assert.assertEquals(Text, "Login");
-			System.out.println("Swipe Action and Click Action functionality on Widgets screen are working as Expected");
+			System.out.println("Swipe Action and Click Action functionality on Widget screens are working as Expected");
 		}
 
 }
