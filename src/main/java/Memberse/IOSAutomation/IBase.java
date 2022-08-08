@@ -127,7 +127,7 @@ public class IBase {
 			{
 				cap.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone");			//Keyword used to run test on real device	
 				cap.setCapability("xcodeOrgId", "CGYHFCCU8D"); 							//Provide here Team ID which get by subscribing for developer a/c or get from Team
-				cap.setCapability("xcodeSigningId", "iPhone Developer"); 				//static
+				cap.setCapability("xcodeSigningId", "iPhone Developer"); 				//Static
 				cap.setCapability("udid", "00008101-000808921AB8001E"); 				//By click on iphone name or serial number in Finder, this will show up when iphone connected to Mac via cable
 				cap.setCapability("updateWDABundlId", "dog.fa.so.app"); 				//Provide this by creating provision profile from Xcode or get from Team
 			}
