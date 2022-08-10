@@ -49,5 +49,12 @@ public class LoginOptionPage {
 	public WebElement loginButton(){    
 		return loginButton;
 	}
+	
+	@iOSXCUITFindBy(iOSClassChain="**/XCUIElementTypeOther[`label == \"Login Email Password Forgot Password? Login OR New to Memberse? Register\"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[1]") 
+	private WebElement appleLogin;
+	
+	public WebElement appleLogin(){    
+		return appleLogin;
+	}
 
 }
