@@ -12,6 +12,7 @@
     		<classes>
       			<class name="Memberse.IOSAutomation.iWidgetSwipeTest"/>
       			<class name="Memberse.IOSAutomation.iLoginTestWithEmail"/>
+      			<class name="Memberse.IOSAutomation.iLoginWithAppleTest"/>
     </classes>
   </test> <!-- Test -->
   
