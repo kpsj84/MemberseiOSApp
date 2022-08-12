@@ -1,7 +1,5 @@
 package Memberse.IOSAutomation;
 
-import java.util.concurrent.TimeUnit;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,16 +8,14 @@ import IOSPageObjects.AppMenus;
 import IOSPageObjects.LoginOptionPage;
 import IOSPageObjects.ProfileMenuPage;
 
-public class iLoginTestWithEmail extends IBase{
+public class iLoginWithEmailTest extends IBase{
 	
 	@Test
-	public void LoginTestCasewithEmail() throws InterruptedException {
+	public void LoginwithEmailTestCase() throws InterruptedException {
 		
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		//App update Continue Button
-		driver.findElementByAccessibilityId("Don’t Allow").click();
 		System.out.println("Wait for application to load");
-		Thread.sleep(5000);
+		Thread.sleep(1000);
+		driver.findElementByAccessibilityId("Don’t Allow").click();
 		
 		WidgetScreenPage wsp = new WidgetScreenPage(driver);
 		wsp.SkipButton().click();
@@ -32,14 +28,12 @@ public class iLoginTestWithEmail extends IBase{
 		String password = emailId;
 		
 		LoginOptionPage lop = new LoginOptionPage(driver);
-		lop.signinWithEmail().sendKeys(email);
+		lop.Email().sendKeys(email);
 		lop.LoginText().click();
 		lop.revealPassword().click();
-		Thread.sleep(2000);
 		lop.emailPassword().click();
 		lop.emailPassword().sendKeys(password);
 		lop.LoginText().click();
-		Thread.sleep(2000);
 		lop.loginButton().click();
 		Thread.sleep(5000);
 		

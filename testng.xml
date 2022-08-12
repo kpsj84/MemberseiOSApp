@@ -11,8 +11,9 @@
   		<test thread-count="5" name="Test">
     		<classes>
       			<class name="Memberse.IOSAutomation.iWidgetSwipeTest"/>
-      			<class name="Memberse.IOSAutomation.iLoginTestWithEmail"/>
+      			<class name="Memberse.IOSAutomation.iLoginWithEmailTest"/>
       			<class name="Memberse.IOSAutomation.iLoginWithAppleTest"/>
+      			<class name="Memberse.IOSAutomation.iEmailFormValidationTest"/>
     </classes>
   </test> <!-- Test -->
   

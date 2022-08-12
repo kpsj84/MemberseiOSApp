@@ -27,7 +27,7 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class IBase {
 	
-	//Flags use to run Test on different Environment, make it true for where to run. (Testing app on Simulator is not yet working due to signing Profile matter)
+	//Flags use to run Test on different Environment, make it true for where to run. (Testing App on Simulator is not yet working due to signing Profile matter)
 		public static boolean sampleTest    = false;
 		public static boolean MemberseReal  = false;
 		public static boolean MemberseCloud = true;
@@ -52,7 +52,7 @@ public class IBase {
 			return service;
 		}
 		
-		//Checks the Server running status and return boolean value to startServer Method
+	//Checks the Server running status and return boolean value to startServer Method
 		public static boolean checkIfServerIsRunnning(int port) {	
 			boolean isServerRunning = false;
 			ServerSocket serverSocket;
@@ -74,7 +74,7 @@ public class IBase {
 			return isServerRunning;
 		}
 
-		//Path for Simulator with Terminal command
+	//Path for Simulator with Terminal command
 		public static void startEmulator() throws IOException, InterruptedException {		
 			if(MemberseReal == true)
 			{
@@ -99,21 +99,21 @@ public class IBase {
 			}
 		}
 		
-		//Set Capabilities for IOS driver and get the appName from Iglobal.properties file, pass appName from Test Class (here coming from @BeforeTest Annotation) & name of String Argument can be different in this Method and in Test Class
+	//Set Capabilities for IOS driver and get the appName from Iglobal.properties file, pass appName from Test Class (here coming from @BeforeTest Annotation) & name of String Argument can be different in this Method and in Test Class
 		public static void capabilities(String appName) throws IOException, InterruptedException {		
 			//Path for global properties file
 			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/Memberse/IOSAutomation/Iglobal.properties");
 			
-			Properties prop = new Properties();						//Create object of Properties class  
-			prop.load(fis);											//Load global.properties file
+			Properties prop = new Properties();							//Create object of Properties class  
+			prop.load(fis);												//Load global.properties file
 			
 			//Path to IOS Application File folder
 			File appDir = new File("src/Application");
-			File app = new File(appDir, (String)prop.get(appName)); //Assign application file Directory & get appName from Properties class object 
+			File app = new File(appDir, (String)prop.get(appName)); 	//Assign application file Directory & get appName from Properties class object 
 			
 			//Device name given in Iglobal.properties file
 			String device = (String)prop.get("deviceName");
-			if(device.contains("iPhone"))							//Start Emulator
+			if(device.contains("iPhone"))								//Start Emulator
 			{
 				startEmulator();
 			}
@@ -140,8 +140,8 @@ public class IBase {
 			cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());						//Get Application Path
 			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//Set XCUIT to perform action in application
 			cap.setCapability("chromedriverExecutable", chromeDriver);								//Get the Path of Chrome Driver
-			cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 180); 						//Set time in seconds to wait for next action, means timeout
-			cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 200000); 						//Set timeout as 20 secs, This is application Launch timeout
+			cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 180); 						//Set time in seconds to wait for next action by WDA, means timeout 180 Seconds = 3 Minutes
+			cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 180000); 						//Set timeout as 180 secs = 3 Minutes, This is application Launch timeout
 			//cap.setCapability("commandTimeouts", 10000); 											//This is to set timeout for scrolling & other things
 			//cap.setCapability("waitForQuiescence", false);
 			//cap.setCapability("wdaEventloopIdleDelay", 3);											
@@ -161,17 +161,17 @@ public class IBase {
 				
 				//Set Cloud Desired Capabilities
 				cap = new DesiredCapabilities();
-				cap.setCapability("browserstack.user", "kamal_BOZ8Ie");									//Browserstack User Key
-				cap.setCapability("browserstack.key", "FJzpiZvMvStzQQNzQHdD");							//Browserstack Password Key
-				cap.setCapability("app", "bs://129f338bfd3eea43ed85ff1d9f597d174e59e164");				//Browserstack uploaded App reference -> Build-24
-				//cap.setCapability("app", "bs://0e40e8d451b489c4c75e85492af9c8e94a6edbee");			//Browserstack uploaded App reference for sample App
-				cap.setCapability("custom_id", "MemberseAppQA");										//Custom Id for App which remains the same for all build uploads if app ref. not change on every upload
-				cap.setCapability("device", "iPhone 13 Pro");											//Browserstack Simulator Name
-				cap.setCapability("os_version", "15.5");												//Browserstack Simulator OS info
-				cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//Bowserstack Type of Automation Reference
+				cap.setCapability("browserstack.user", "kamal_BOZ8Ie");									//BrowserStack User Key
+				cap.setCapability("browserstack.key", "FJzpiZvMvStzQQNzQHdD");							//BrowserStack Password Key
+				cap.setCapability("app", "bs://129f338bfd3eea43ed85ff1d9f597d174e59e164");				//BrowserStack uploaded App reference -> Build-24
+				//cap.setCapability("app", "bs://0e40e8d451b489c4c75e85492af9c8e94a6edbee");			//BrowserStack uploaded App reference for sample App
+				cap.setCapability("custom_id", "MemberseAppQA");										//Custom Id for App which remains the same for all build uploads if App ref. not change on every upload
+				cap.setCapability("device", "iPhone 13 Pro");											//BrowserStack Simulator Name
+				cap.setCapability("os_version", "15.5");												//BrowserStack Simulator OS info
+				cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//BowserStack Type of Automation Reference
 				cap.setCapability("chromedriverExecutable", chromeDriver);	
 				cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 180); 
-				cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 200000);
+				cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 180000);
 			}
 		
 		@BeforeTest
@@ -184,7 +184,7 @@ public class IBase {
 			}
 			else
 			{
-				//Starts the Server before to <test> tag execution in testNg.xml file i.e. before to all classes given in xml file
+				//Starts the Server before to <test> tag execution in testng.xml file i.e. before to all classes given in xml file
 				service=startServer();
 			}
 			
@@ -224,7 +224,7 @@ public class IBase {
 			
 			if(MemberseCloud == true)
 			{
-				//IOS Driver is redirect to cloud Service (Browserstack)
+				//IOS Driver is redirect to cloud Service (BrowserStack)
 				driver = new IOSDriver<>(new URL("http://hub.browserstack.com/wd/hub"),cap);
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			}

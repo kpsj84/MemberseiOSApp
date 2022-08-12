@@ -17,7 +17,7 @@ public class IUtilities {
 	
 	public IUtilities(IOSDriver<IOSElement> driver) 
 	{
-		this.localdriver=driver; //Assign base class driver to this class local driver
+		this.localdriver=driver; 	//Assign base class driver to this class local driver
 	}
 	
 	//Method Created for Scroll with the receive of argument as text up to which driver has to scroll 
