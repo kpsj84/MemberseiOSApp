@@ -11,7 +11,7 @@ import IOSPageObjects.ProfileMenuPage;
 public class iLoginWithEmailTest extends IBase{
 	
 	@Test
-	public void LoginwithEmailTestCase() throws InterruptedException {
+	public void iLoginwithEmailTestCase() throws InterruptedException {
 		
 		System.out.println("Wait for application to load");
 		Thread.sleep(1000);
