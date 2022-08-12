@@ -23,10 +23,10 @@ public class LoginOptionPage {
 	}
 	
 	@iOSXCUITFindBy(xpath="(//XCUIElementTypeOther[@name=\"Email\"])[3]/XCUIElementTypeTextField") 
-	private WebElement signinWithEmail;
+	private WebElement Email;
 	
-	public WebElement signinWithEmail(){    
-		return signinWithEmail;
+	public WebElement Email(){    
+		return Email;
 	}
 	
 	@iOSXCUITFindBy(xpath="(//XCUIElementTypeOther[@name=\"Password\"])[3]/XCUIElementTypeTextField") 
@@ -55,6 +55,34 @@ public class LoginOptionPage {
 	
 	public WebElement appleLogin(){    
 		return appleLogin;
+	}
+	
+	@iOSXCUITFindBy(iOSClassChain="**/XCUIElementTypeOther[`label == \"Login Email Password Forgot Password? Login OR New to Memberse? Register\"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[2]") 
+	private WebElement signinWithGoogle;
+	
+	public WebElement signinWithGoogle(){    
+		return signinWithGoogle;
+	}
+	
+	@iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name='Continue']") 
+	private WebElement GoogleLoginConfirmation;
+	
+	public WebElement GoogleLoginConfirmation(){    
+		return GoogleLoginConfirmation;
+	}
+	
+	@iOSXCUITFindBy(iOSClassChain="**/XCUIElementTypeOther[`label == \"Login Email Password Forgot Password? Login OR New to Memberse? Register\"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[3]") 
+	private WebElement signinWithFacebook;
+	
+	public WebElement signinWithFacebook(){    
+		return signinWithFacebook;
+	}
+	
+	@iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name='Continue']") 
+	private WebElement FacebookLoginConfirmation;
+	
+	public WebElement FacebookLoginConfirmation(){    
+		return FacebookLoginConfirmation;
 	}
 
 }
