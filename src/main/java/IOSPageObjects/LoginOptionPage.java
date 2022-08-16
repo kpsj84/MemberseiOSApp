@@ -84,5 +84,12 @@ public class LoginOptionPage {
 	public WebElement FacebookLoginConfirmation(){    
 		return FacebookLoginConfirmation;
 	}
+	
+	@iOSXCUITFindBy(xpath="//XCUIElementTypeOther[@name=\"Register\"]") 
+	private WebElement Register;
+	
+	public WebElement Register(){    
+		return Register;
+	}
 
 }

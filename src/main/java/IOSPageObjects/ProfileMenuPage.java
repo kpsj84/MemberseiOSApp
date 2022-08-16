@@ -21,5 +21,12 @@ public class ProfileMenuPage {
 	public WebElement UserInfo(){    
 		return UserInfo;
 	}
+	
+	@iOSXCUITFindBy(xpath="(//XCUIElementTypeOther[@name=\"Log out Log out of your current session\"])[3]") 
+	private WebElement Logout;
+	
+	public WebElement Logout(){    
+		return Logout;
+	}
 
 }
