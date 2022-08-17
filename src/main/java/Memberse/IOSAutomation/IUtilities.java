@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.Dimension;
 
+import IOSPageObjects.TutorialScreenPage;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
@@ -95,6 +96,19 @@ public class IUtilities {
 		    DOWN,
 		    LEFT,
 		    RIGHT;
+		}
+		
+		//Directly Land to Login Option Screen Method
+		public void Direct2LoginOptionPage() {
+			System.out.println("Wait for application to load, It may take few seconds to perform first action");
+			
+			//App Notification Confirmation Button
+			localdriver.findElementByAccessibilityId("Don’t Allow").click();
+			
+			//Skip Button on Tutorial Screen
+			TutorialScreenPage tsp = new TutorialScreenPage(localdriver);
+			tsp.SkipButton().click();
+			System.out.println("Reached Login Options Screen");
 		}
 		
 }
