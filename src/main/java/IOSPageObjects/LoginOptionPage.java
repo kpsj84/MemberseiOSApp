@@ -43,7 +43,7 @@ public class LoginOptionPage {
 		return revealPassword;
 	}
 	
-	@iOSXCUITFindBy(iOSClassChain="**/XCUIElementTypeOther[`label == \"Login\"`]") 
+	@iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeOther[`label == \"Login\"`]") 
 	private WebElement loginButton;
 	
 	public WebElement loginButton(){    
@@ -92,4 +92,11 @@ public class LoginOptionPage {
 		return Register;
 	}
 
+	@iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name=\"New to Memberse?\"]") 
+	private WebElement BottomText;
+	
+	public WebElement BottomText(){    
+		return BottomText;
+	}
+	
 }

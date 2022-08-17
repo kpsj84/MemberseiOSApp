@@ -108,7 +108,8 @@ public class IBase {
 			prop.load(fis);												//Load global.properties file
 			
 			//Path to IOS Application File folder
-			File appDir = new File("src/Application");
+			//File appDir = new File("src/Application");
+			File appDir = new File("/Users/kamaljhinjer/Documents/Z-IOS-Memberse-Builds");
 			File app = new File(appDir, (String)prop.get(appName)); 	//Assign application file Directory & get appName from Properties class object 
 			
 			//Device name given in Iglobal.properties file
@@ -136,7 +137,7 @@ public class IBase {
 				cap.setCapability(MobileCapabilityType.DEVICE_NAME, device);						//Get Device Name from Iglobal.properties file
 			}
 			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");							//Set OS Name
-			cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.5");						//Set OS Version
+			cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "15.6");						//Set OS Version
 			cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());						//Get Application Path
 			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//Set XCUIT to perform action in application
 			cap.setCapability("chromedriverExecutable", chromeDriver);								//Get the Path of Chrome Driver
@@ -163,11 +164,11 @@ public class IBase {
 				cap = new DesiredCapabilities();
 				cap.setCapability("browserstack.user", "kamal_BOZ8Ie");									//BrowserStack User Key
 				cap.setCapability("browserstack.key", "FJzpiZvMvStzQQNzQHdD");							//BrowserStack Password Key
-				cap.setCapability("app", "bs://129f338bfd3eea43ed85ff1d9f597d174e59e164");				//BrowserStack uploaded App reference -> Build-24
+				cap.setCapability("app", "bs://5ce601a9f85b9bc04608a8167e42fd9d0fd21d86");				//BrowserStack uploaded App reference -> Build-25
 				//cap.setCapability("app", "bs://0e40e8d451b489c4c75e85492af9c8e94a6edbee");			//BrowserStack uploaded App reference for sample App
 				cap.setCapability("custom_id", "MemberseAppQA");										//Custom Id for App which remains the same for all build uploads if App ref. not change on every upload
 				cap.setCapability("device", "iPhone 13 Pro");											//BrowserStack Simulator Name
-				cap.setCapability("os_version", "15.5");												//BrowserStack Simulator OS info
+				cap.setCapability("os_version", "15.6");												//BrowserStack Simulator OS info
 				cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//BowserStack Type of Automation Reference
 				cap.setCapability("chromedriverExecutable", chromeDriver);	
 				cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 180); 

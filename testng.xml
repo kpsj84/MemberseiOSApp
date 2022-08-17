@@ -10,12 +10,15 @@
     <!-- Give Reference to Test Classes-->
   		<test thread-count="5" name="Test">
     		<classes>
-      			<class name="Memberse.IOSAutomation.iWidgetSwipeTest"/>
+      			<class name="Memberse.IOSAutomation.iTutorialSwipeTest"/>
       			<class name="Memberse.IOSAutomation.iEmailFormValidationTest"/>
       			<class name="Memberse.IOSAutomation.iLoginWithEmailTest"/>
       			<class name="Memberse.IOSAutomation.iLoginWithAppleTest"/>
       			<class name="Memberse.IOSAutomation.iLoginWithGoogleTest"/>
       			<class name="Memberse.IOSAutomation.iLoginWithFacebookTest"/>
+      			<class name="Memberse.IOSAutomation.iRegisterFormValidationTest"/>
+      			<class name="Memberse.IOSAutomation.iRegisterWithEmailTest"/>  
+      			<class name="Memberse.IOSAutomation.iLougoutTest"/>    			
     </classes>
   </test> <!-- Test -->
   

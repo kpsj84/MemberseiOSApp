@@ -3,7 +3,6 @@ package Memberse.IOSAutomation;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import IOSPageObjects.WidgetScreenPage;
 import IOSPageObjects.AppMenus;
 import IOSPageObjects.LoginOptionPage;
 import IOSPageObjects.ProfileMenuPage;
@@ -13,14 +12,10 @@ public class iLoginWithEmailTest extends IBase{
 	@Test
 	public void iLoginwithEmailTestCase() throws InterruptedException {
 		
-		System.out.println("Wait for application to load");
-		Thread.sleep(1000);
-		driver.findElementByAccessibilityId("Don’t Allow").click();
+		IUtilities u = new IUtilities(driver);
+		u.Direct2LoginOptionPage();
 		
-		WidgetScreenPage wsp = new WidgetScreenPage(driver);
-		wsp.SkipButton().click();
-		
-		String userNumber = "40";
+		String userNumber = "iA40";
 		String userName = "AutoUser"+userNumber;
 		String emailId = "autouser"+userNumber;
 		String emailDomain = "@yopmail.com";
@@ -35,7 +30,7 @@ public class iLoginWithEmailTest extends IBase{
 		lop.emailPassword().sendKeys(password);
 		lop.LoginText().click();
 		lop.loginButton().click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		
 		AppMenus am = new AppMenus(driver);
 		am.ProfileMenu().click();
@@ -46,7 +41,7 @@ public class iLoginWithEmailTest extends IBase{
 		String VerifyEmail = driver.findElementByXPath("(//XCUIElementTypeOther[@name=\"Email\"])[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeTextField").getText();
 		Assert.assertEquals(email, VerifyEmail);
 		System.out.println("Expected Vs Actual is: "+ email + " Vs " + VerifyEmail);
-		System.out.println(userName + " Login Test Passed");
+		System.out.println(userName + " Login Test Case Passed");
 	}
 
 }

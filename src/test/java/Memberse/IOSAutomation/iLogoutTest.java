@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import IOSPageObjects.AppMenus;
 import IOSPageObjects.LoginOptionPage;
 import IOSPageObjects.ProfileMenuPage;
-import IOSPageObjects.WidgetScreenPage;
+import IOSPageObjects.TutorialScreenPage;
 import Memberse.IOSAutomation.IUtilities.Direction;
 
 public class iLogoutTest extends IBase {
@@ -17,7 +17,7 @@ public class iLogoutTest extends IBase {
 		Thread.sleep(1000);
 		driver.findElementByAccessibilityId("Don’t Allow").click();
 		
-		WidgetScreenPage wsp = new WidgetScreenPage(driver);
+		TutorialScreenPage wsp = new TutorialScreenPage(driver);
 		wsp.SkipButton().click();
 		
 		String userNumber = "40";

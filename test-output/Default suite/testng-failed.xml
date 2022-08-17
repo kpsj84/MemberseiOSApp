@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Memberse.IOSAutomation.iLoginWithFacebookTest">
+      <class name="Memberse.IOSAutomation.iRegisterWithEmailTest">
         <methods>
           <include name="quitDriver"/>
-          <include name="iLoginWithFacebookTestCase"/>
           <include name="startService"/>
           <include name="beforeMethod"/>
           <include name="startDriver"/>
           <include name="stopService"/>
           <include name="afterMethod"/>
+          <include name="iRegisterWithEmailTestCase"/>
         </methods>
-      </class> <!-- Memberse.IOSAutomation.iLoginWithFacebookTest -->
+      </class> <!-- Memberse.IOSAutomation.iRegisterWithEmailTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
