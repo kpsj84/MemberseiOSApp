@@ -1,5 +1,8 @@
 package Memberse.IOSAutomation;
 
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -17,13 +20,10 @@ public class iRegisterWithEmailTest extends IBase{
 		LoginOptionPage lop = new LoginOptionPage(driver);
 		lop.Register().click();
 		
-		String userNumber = IUsersDetail.RegisterTestNumber;
-		String firstName = "AutoUser"+userNumber;
-		String lastName = "QATest"+userNumber;
-		String emailId = "autouser"+userNumber;
+		String autoString = getSaltString();
 		String emailDomain = "@yopmail.com";
-		String email = emailId+emailDomain;
-		String password = emailId;
+		String email = autoString+emailDomain;
+		String password = "12345";
 		
 		Thread.sleep(1000);
 		driver.findElementByXPath("(//XCUIElementTypeOther[@name=\"Email\"])[3]/XCUIElementTypeTextField").sendKeys(email);
@@ -34,12 +34,16 @@ public class iRegisterWithEmailTest extends IBase{
 		driver.findElementByXPath("(//XCUIElementTypeOther[@name=\"Confirm Password\"])[2]/XCUIElementTypeOther[2]").click();
 		driver.findElementByXPath("(//XCUIElementTypeOther[@name=\"Confirm Password\"])[3]/XCUIElementTypeTextField").sendKeys(password);
 		driver.findElementByXPath("//XCUIElementTypeStaticText[@name=\"Sign up\"]").click();
-		Thread.sleep(1000);
-		driver.findElementByIosClassChain("**/XCUIElementTypeOther[`label == \"Continue\"`][2]").click();
-		Thread.sleep(6000);
-		
-		driver.findElementByXPath("(//XCUIElementTypeOther[@name=\"As a creator Create your own channel and monetize your content.\"])[2]").click();
 		Thread.sleep(2000);
+		driver.findElementByXPath("//XCUIElementTypeOther[@name=\"Continue\"]").click();
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		
+		driver.findElementByXPath("(//XCUIElementTypeOther[@name=\"As a Creator Start your Community and invite Members to enjoy your content!\"])[2]").click();
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.findElementByXPath("//*[@text='Next']").click();
+		driver.findElementByXPath("//*[@name='Next']").click();
+		driver.findElementByXPath("//*[@name='Next']").click();
+		driver.findElementByXPath("//*[@name='Close']").click();
 		
 		AppMenus am = new AppMenus(driver);
 		am.ProfileMenu().click();
@@ -51,7 +55,19 @@ public class iRegisterWithEmailTest extends IBase{
 		String VerifyEmail = driver.findElementByXPath("(//XCUIElementTypeOther[@name=\"Email\"])[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeTextField").getText();
 		Assert.assertEquals(email, VerifyEmail);
 		System.out.println("Expected Vs Actual is: "+ email + " Vs " + VerifyEmail);
-		System.out.println(firstName + lastName + " Register Test Passed");
+		System.out.println(email + " Register Test Passed");
 	}
+	
+	public String getSaltString() {
+        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 10) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+            salt.append(SALTCHARS.charAt(index));
+        }
+        String saltStr = salt.toString();
+        return saltStr;
+    }
 
 }
