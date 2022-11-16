@@ -29,14 +29,15 @@ public class AppMenus {
 		return HomeMenu;
 	}
 	
-	@iOSXCUITFindBy(xpath="//XCUIElementTypeTabBar[@name=\"Tab Bar\"]/XCUIElementTypeButton[3]") 
+/*	@iOSXCUITFindBy(xpath="//XCUIElementTypeTabBar[@name=\"Tab Bar\"]/XCUIElementTypeButton[3]") 
 	private WebElement ActivitiesMenu;
 	
 	public WebElement ActivitiesMenu(){    
 		return ActivitiesMenu;
 	}
+*/
 	
-	@iOSXCUITFindBy(xpath="//XCUIElementTypeTabBar[@name=\"Tab Bar\"]/XCUIElementTypeButton[4]") 
+	@iOSXCUITFindBy(xpath="//XCUIElementTypeTabBar[@name=\"Tab Bar\"]/XCUIElementTypeButton[3]") 
 	private WebElement ProfileMenu;
 	
 	public WebElement ProfileMenu(){    

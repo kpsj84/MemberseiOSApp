@@ -9,7 +9,6 @@ public class iEmailFormValidationTest extends IBase {
 	
 	@Test
 	public void iEmailFormValidationTestCase() throws InterruptedException {
-		
 		IUtilities u = new IUtilities(driver);
 		u.Direct2LoginOptionPage();
 		
