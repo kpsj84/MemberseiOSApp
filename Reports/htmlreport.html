@@ -43,7 +43,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 8, 2022 03:42:01 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Nov 18, 2022 02:01:25 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -59,6 +59,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -101,10 +102,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='11.111%'><span class='strong'>1</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='88.889%'>8</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -124,14 +125,14 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>iWidgetSwipeTestCase</span>
-						<span class='test-time'>Aug 8, 2022 03:42:01 PM</span>
+						<span class='test-name'>iTutorialSwipeTestCase</span>
+						<span class='test-time'>Nov 18, 2022 02:01:25 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Aug 8, 2022 03:42:01 PM</span>
-	<span class='label end-time'>Aug 8, 2022 03:42:01 PM</span>
+	<span class='label start-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label end-time'>Nov 18, 2022 02:01:25 PM</span>
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
 </div>
 <div class='test-steps'>
@@ -146,9 +147,297 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>3:42:01 PM</td>
+				<td class='timestamp'>2:01:25 PM</td>
 				<td class='step-details'>
 						Test passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>iLoginwithEmailTestCase</span>
+						<span class='test-time'>Nov 18, 2022 02:01:25 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label end-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:01:25 PM</td>
+				<td class='step-details'>
+						Can't locate an element by this strategy: By.chained({By.xpath: //*[@name='Log in']})
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>iLoginWithGoogleTestCase</span>
+						<span class='test-time'>Nov 18, 2022 02:01:25 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label end-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:01:25 PM</td>
+				<td class='step-details'>
+						Can't locate an element by this strategy: By.chained({By.IosClassChain: **/XCUIElementTypeOther[`label == "Login Email Password Forgot Password? Login OR New to Memberse? Register"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[2]})
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>iRegisterFormValidationTestCase</span>
+						<span class='test-time'>Nov 18, 2022 02:01:25 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label end-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:01:25 PM</td>
+				<td class='step-details'>
+						Can't locate an element by this strategy: By.chained({By.xpath: //*[@name='Log in']})
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>iLogoutTestCase</span>
+						<span class='test-time'>Nov 18, 2022 02:01:25 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label end-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:01:25 PM</td>
+				<td class='step-details'>
+						An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Kamals-MacBook-Pro.local', ip: 'fe80:0:0:0:c60:41f8:5238:ada6%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {64bit: false, acceptSslCert: false, acceptSslCerts: false, automationName: XCuiTest, bootstrapPath: /usr/local/.browserstack/co..., browserName: , browserstack.appium_version: 1.21.0, browserstack.isTargetBased: false, browserstack.is_hub_canary: false, browserstack.minOSVersion: 11.0, bundleID: dog.fa.so.app, bundleId: dog.fa.so.app, capabilities: {64bit: false, acceptSslCert: false, acceptSslCerts: false, automationName: XCuiTest, bootstrapPath: /usr/local/.browserstack/co..., browserName: , browserstack.appium_version: 1.21.0, browserstack.isTargetBased: false, browserstack.is_hub_canary: false, browserstack.minOSVersion: 11.0, bundleID: dog.fa.so.app, bundleId: dog.fa.so.app, custom_replay_kit_params: {"rotation":"false","captur..., databaseEnabled: false, detected_language: selenium/3.141.59 (java mac), device: iphone, deviceName: iPhone 13 Pro, deviceOrientation: PORTRAIT, javascriptEnabled: true, launchTimeout: 180000, locationContextEnabled: false, mobile: {browser: mobile, version: iPhone 13 Pro-15.6}, networkConnectionEnabled: false, newCommandTimeout: 0, new_bucketing: true, noReset: true, orientation: PORTRAIT, orig_os: ios, osVersion: 15.6, os_version: 15.6, platform: MAC, platformName: iOS, realMobile: true, safariIgnoreFraudWarning: true, safariInitialUrl: http://mobile-internet-chec..., sessionId: c9981431cbc34b24d1b1d368cfd..., takesScreenshot: true, udid: 00008110-0019599A1A7A801E, uiautomator2ServerLaunchTimeout: 60000, useXctestrunFile: true, version: , waitForQuiescence: false, wdaStartupRetries: 3, wda_port: 8403, webStorageEnabled: false, webkitResponseTimeout: 20000}, custom_replay_kit_params: {"rotation":"false","captur..., databaseEnabled: false, detected_language: selenium/3.141.59 (java mac), device: iphone, deviceName: iPhone 13 Pro, deviceOrientation: PORTRAIT, javascriptEnabled: true, launchTimeout: 180000, locationContextEnabled: false, mobile: {browser: mobile, version: iPhone 13 Pro-15.6}, networkConnectionEnabled: false, newCommandTimeout: 0, new_bucketing: true, noReset: true, orientation: PORTRAIT, orig_os: ios, osVersion: 15.6, os_version: 15.6, platform: MAC, platformName: iOS, realMobile: true, safariIgnoreFraudWarning: true, safariInitialUrl: http://mobile-internet-chec..., sessionId: c9981431cbc34b24d1b1d368cfd..., takesScreenshot: true, udid: 00008110-0019599A1A7A801E, uiautomator2ServerLaunchTimeout: 60000, useXctestrunFile: true, version: , waitForQuiescence: false, wdaStartupRetries: 3, wda_port: 8403, webStorageEnabled: false, webkitResponseTimeout: 20000}
+Session ID: c9981431cbc34b24d1b1d368cfd06e2f725f54ba
+*** Element info: {Using=accessibility id, value=Don’t Allow}
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>iRegisterWithEmailTestCase</span>
+						<span class='test-time'>Nov 18, 2022 02:01:25 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label end-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:01:25 PM</td>
+				<td class='step-details'>
+						Can't locate an element by this strategy: By.chained({By.xpath: //*[@name='Log in']})
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>iLoginWithFacebookTestCase</span>
+						<span class='test-time'>Nov 18, 2022 02:01:25 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label end-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:01:25 PM</td>
+				<td class='step-details'>
+						Can't locate an element by this strategy: By.chained({By.IosClassChain: **/XCUIElementTypeOther[`label == "Login Email Password Forgot Password? Login OR New to Memberse? Register"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[3]})
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>iEmailFormValidationTestCase</span>
+						<span class='test-time'>Nov 18, 2022 02:01:25 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label end-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:01:25 PM</td>
+				<td class='step-details'>
+						Can't locate an element by this strategy: By.chained({By.xpath: //*[@name='Log in']})
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>iLoginWithAppleTestCase</span>
+						<span class='test-time'>Nov 18, 2022 02:01:25 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label end-time'>Nov 18, 2022 02:01:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>2:01:25 PM</td>
+				<td class='step-details'>
+						Can't locate an element by this strategy: By.chained({By.IosClassChain: **/XCUIElementTypeOther[`label == "Login Email Password Forgot Password? Login OR New to Memberse? Register"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[1]})
 					
 				</td>
 			</tr>
@@ -186,7 +475,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>9</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -198,13 +487,13 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 8, 2022 03:42:01 PM</div>
+					<div class='panel-lead'>Nov 18, 2022 02:01:25 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 8, 2022 03:42:01 PM</div>
+			 		<div class='panel-lead'>Nov 18, 2022 02:01:25 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -222,12 +511,12 @@
 		<script>
 			var statusGroup = {
 				passParent: 1,
-				failParent: 0,
+				failParent: 8,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 8,
 				
 				passChild: 0,
 				failChild: 0,
@@ -252,7 +541,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "iWidgetSwipeTestCase":0.001
+			        "iTutorialSwipeTestCase":0.001,"iLoginwithEmailTestCase":0,"iLoginWithGoogleTestCase":0,"iRegisterFormValidationTestCase":0,"iLogoutTestCase":0,"iRegisterWithEmailTestCase":0,"iLoginWithFacebookTestCase":0,"iEmailFormValidationTestCase":0,"iLoginWithAppleTestCase":0
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/master/v3html/js/extent.js' type='text/javascript'></script>

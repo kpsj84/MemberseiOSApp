@@ -1,19 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="IOSResources.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Memberse.IOSAutomation.iSmokeTest">
+      <class name="Memberse.IOSAutomation.iLoginWithFacebookTest">
         <methods>
           <include name="quitDriver"/>
-          <include name="iTutorialSwipeTestCase"/>
+          <include name="iLoginWithFacebookTestCase"/>
           <include name="startService"/>
           <include name="beforeMethod"/>
           <include name="startDriver"/>
           <include name="stopService"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- Memberse.IOSAutomation.iSmokeTest -->
+      </class> <!-- Memberse.IOSAutomation.iLoginWithFacebookTest -->
+      <class name="Memberse.IOSAutomation.iLoginWithGoogleTest">
+        <methods>
+          <include name="quitDriver"/>
+          <include name="startService"/>
+          <include name="beforeMethod"/>
+          <include name="startDriver"/>
+          <include name="stopService"/>
+          <include name="afterMethod"/>
+          <include name="iLoginWithGoogleTestCase"/>
+        </methods>
+      </class> <!-- Memberse.IOSAutomation.iLoginWithGoogleTest -->
+      <class name="Memberse.IOSAutomation.iLogoutTest">
+        <methods>
+          <include name="quitDriver"/>
+          <include name="startService"/>
+          <include name="beforeMethod"/>
+          <include name="startDriver"/>
+          <include name="stopService"/>
+          <include name="afterMethod"/>
+          <include name="iLogoutTestCase"/>
+        </methods>
+      </class> <!-- Memberse.IOSAutomation.iLogoutTest -->
+      <class name="Memberse.IOSAutomation.iEmailFormValidationTest">
+        <methods>
+          <include name="iEmailFormValidationTestCase"/>
+          <include name="quitDriver"/>
+          <include name="startService"/>
+          <include name="beforeMethod"/>
+          <include name="startDriver"/>
+          <include name="stopService"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- Memberse.IOSAutomation.iEmailFormValidationTest -->
+      <class name="Memberse.IOSAutomation.iLoginWithEmailTest">
+        <methods>
+          <include name="quitDriver"/>
+          <include name="iLoginwithEmailTestCase"/>
+          <include name="startService"/>
+          <include name="beforeMethod"/>
+          <include name="startDriver"/>
+          <include name="stopService"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- Memberse.IOSAutomation.iLoginWithEmailTest -->
+      <class name="Memberse.IOSAutomation.iLoginWithAppleTest">
+        <methods>
+          <include name="quitDriver"/>
+          <include name="startService"/>
+          <include name="beforeMethod"/>
+          <include name="startDriver"/>
+          <include name="stopService"/>
+          <include name="afterMethod"/>
+          <include name="iLoginWithAppleTestCase"/>
+        </methods>
+      </class> <!-- Memberse.IOSAutomation.iLoginWithAppleTest -->
+      <class name="Memberse.IOSAutomation.iRegisterFormValidationTest">
+        <methods>
+          <include name="quitDriver"/>
+          <include name="beforeMethod"/>
+          <include name="startService"/>
+          <include name="startDriver"/>
+          <include name="stopService"/>
+          <include name="afterMethod"/>
+          <include name="iRegisterFormValidationTestCase"/>
+        </methods>
+      </class> <!-- Memberse.IOSAutomation.iRegisterFormValidationTest -->
+      <class name="Memberse.IOSAutomation.iRegisterWithEmailTest">
+        <methods>
+          <include name="quitDriver"/>
+          <include name="beforeMethod"/>
+          <include name="startService"/>
+          <include name="startDriver"/>
+          <include name="stopService"/>
+          <include name="afterMethod"/>
+          <include name="iRegisterWithEmailTestCase"/>
+        </methods>
+      </class> <!-- Memberse.IOSAutomation.iRegisterWithEmailTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

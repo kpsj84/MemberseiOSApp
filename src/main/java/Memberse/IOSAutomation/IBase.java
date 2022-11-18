@@ -30,8 +30,10 @@ public class IBase {
 	//Flags use to run Test on different Environment, make it true for where to run. (Testing App on Simulator is not yet working due to signing Profile matter)
 		public static boolean sampleTest    = false;
 		public static boolean MemberseReal  = false;
-		public static boolean MemberseCloud = true;
 		public static boolean MemberseCS    = false;
+		public static boolean MemberseCloud = true;
+		public static boolean MemberseProd  = false;
+		
 	
 	//Initiate IOS Driver, Appium Driver Service & Desired Capabilities
 		public static IOSDriver<IOSElement> 	driver;
@@ -80,7 +82,7 @@ public class IBase {
 			{
 				System.out.println("Test's are running on Real device");
 			}
-			else if(MemberseCloud == true)
+			else if(MemberseCloud == true || MemberseProd == true)
 			{
 				System.out.println("Simulator is running on cloud");
 			}
@@ -153,7 +155,7 @@ public class IBase {
 		}
 		
 		//Set Cloud Capabilities for IOS driver and get the appName from Iglobal.properties file, pass appName from Test Class (here coming from @BeforeTest Annotation) & name of String Argument can be different in this Method and in Test Class
-			public static void cloudCapabilities(String appName) throws IOException, InterruptedException{		
+		public static void cloudCapabilities(String appName) throws IOException, InterruptedException{		
 				//This method called just to print the message written in startEmulator()
 				startEmulator();
 				
@@ -164,7 +166,7 @@ public class IBase {
 				cap = new DesiredCapabilities();
 				cap.setCapability("browserstack.user", "kamal_BOZ8Ie");									//BrowserStack User Key
 				cap.setCapability("browserstack.key", "FJzpiZvMvStzQQNzQHdD");							//BrowserStack Password Key
-				//cap.setCapability("app", "bs://77fec00777fc89be3b248e533b1df214a313110d");			//BrowserStack uploaded App reference -> Build-28
+				//cap.setCapability("app", "bs://77fec00777fc89be3b248e533b1df214a313110d");			//BrowserStack uploaded App reference -> QA build-5.1.2(45)
 				//cap.setCapability("app", "bs://0e40e8d451b489c4c75e85492af9c8e94a6edbee");			//BrowserStack uploaded App reference for sample App
 				cap.setCapability("app", "MemberseiOSApp");												//This is use of customd_id, Uploaded QA build-35
 				//cap.setCapability("app", "kamal_BOZ8Ie/MemberseiOSApp");								//This is use of shareable_is, If team member to test this app w/o password credentials
@@ -176,11 +178,31 @@ public class IBase {
 				cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 180000);
 			}
 		
+		public static void prodCapabilities(String appName) throws IOException, InterruptedException{		
+			startEmulator();
+			
+			String chromeDriver = (System.getProperty("user.dir")+"/src/chromedriver/chromedriver");
+			
+			cap = new DesiredCapabilities();
+			cap.setCapability("browserstack.user", "kamal_BOZ8Ie");									
+			cap.setCapability("browserstack.key", "FJzpiZvMvStzQQNzQHdD");							
+			//cap.setCapability("app", "bs://77fec00777fc89be3b248e533b1df214a313110d");			
+			//cap.setCapability("app", "bs://0e40e8d451b489c4c75e85492af9c8e94a6edbee");			
+			cap.setCapability("app", "MemberseiOSProdApp");												//This is use of customd_id, Uploaded Prod build-5.1.2(38)
+			//cap.setCapability("app", "kamal_BOZ8Ie/MemberseiOSProdApp");								//This is use of shareable_is, If team member to test this app w/o password credentials
+			cap.setCapability("device", "iPhone 13 Pro");											//BrowserStack Simulator Name
+			cap.setCapability("os_version", "15.6");												//BrowserStack Simulator OS info
+			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//BowserStack Type of Automation Reference
+			cap.setCapability("chromedriverExecutable", chromeDriver);	
+			cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 180); 
+			cap.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 180000);
+		}
+			
 		@BeforeTest
 		public void startService() throws IOException, InterruptedException {	
 			System.out.println("Entered Before Test, Starting Server & Launching App");
 			
-			if(MemberseCloud == true)
+			if(MemberseCloud == true || MemberseProd == true)
 			{
 				System.out.println("Server is running on cloud, so start server manage by cloud itself");
 			}
@@ -199,6 +221,10 @@ public class IBase {
 			{
 				cloudCapabilities("MemberseApp");
 			}
+			else if(MemberseProd == true)
+			{
+				prodCapabilities("MemberseApp");
+			}
 			else 
 			{
 				capabilities("MemberseApp");
@@ -209,7 +235,7 @@ public class IBase {
 		public void stopService() {		
 			System.out.println("Entered After Test & Stoping Server");
 			
-			if(MemberseCloud == true)
+			if(MemberseCloud == true || MemberseProd == true)
 			{
 				System.out.println("Server is running on cloud, so stop server manage by cloud only");
 			}
@@ -224,7 +250,7 @@ public class IBase {
 		public IOSDriver<IOSElement> startDriver() throws MalformedURLException {
 			System.out.println("Entered Before Class & passing capabilities to driver every time the Test's Start in New Class");
 			
-			if(MemberseCloud == true)
+			if(MemberseCloud == true || MemberseProd == true)
 			{
 				//IOS Driver is redirect to cloud Service (BrowserStack)
 				driver = new IOSDriver<>(new URL("http://hub.browserstack.com/wd/hub"),cap);

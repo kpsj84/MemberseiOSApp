@@ -21,7 +21,7 @@
       			<class name="Memberse.IOSAutomation.iLoginWithFacebookTest"/>
       			
       			<class name="Memberse.IOSAutomation.iRegisterWithEmailTest"/>  
-      			<class name="Memberse.IOSAutomation.iLougoutTest"/>    			
+      			<class name="Memberse.IOSAutomation.iLogoutTest"/>    			
     </classes>
   </test> <!-- Test -->
   
