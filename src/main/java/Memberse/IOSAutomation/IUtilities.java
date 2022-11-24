@@ -1,7 +1,6 @@
 package Memberse.IOSAutomation;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Dimension;
 
@@ -100,13 +99,33 @@ public class IUtilities {
 		}
 		
 		//Directly Land to Login Option Screen Method
-		public void Direct2LoginOptionPage() {
-			System.out.println("Wait for application to load, It may take few seconds to perform first action");
+		public void Direct2LoginOptionPage() throws InterruptedException {
+			try
+			{
+				localdriver.findElementById("Open").click();
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.toString());
+			}
 			
-			//Verify UI of Welcome Screen
+			try
+			{
+				localdriver.findElementByXPath("//XCUIElementTypeButton[@name='Continue']").click();
+			}
+			catch(Exception e)
+			{
+				System.out.println(e.toString());
+			}
+			finally
+			{
+				System.out.println("Wait for application to load, It may take few seconds to perform first action");
+				Thread.sleep(10000);
+			}
+			
 			WelcomePage wp = new WelcomePage(localdriver);
-			localdriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			wp.LoginButton().click();
+			Thread.sleep(1000);
 			
 			//App Notification Confirmation Button
 			localdriver.findElementByAccessibilityId("Don’t Allow").click();

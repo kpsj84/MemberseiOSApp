@@ -188,8 +188,8 @@ public class IBase {
 			cap.setCapability("browserstack.key", "FJzpiZvMvStzQQNzQHdD");							
 			//cap.setCapability("app", "bs://77fec00777fc89be3b248e533b1df214a313110d");			
 			//cap.setCapability("app", "bs://0e40e8d451b489c4c75e85492af9c8e94a6edbee");			
-			cap.setCapability("app", "MemberseiOSProdApp");												//This is use of customd_id, Uploaded Prod build-5.1.2(38)
-			//cap.setCapability("app", "kamal_BOZ8Ie/MemberseiOSProdApp");								//This is use of shareable_is, If team member to test this app w/o password credentials
+			cap.setCapability("app", "MemberseiOSProdApp");											//This is use of customd_id, Uploaded Prod build-5.1.2(38)
+			//cap.setCapability("app", "kamal_BOZ8Ie/MemberseiOSProdApp");							//This is use of shareable_is, If team member to test this app w/o password credentials
 			cap.setCapability("device", "iPhone 13 Pro");											//BrowserStack Simulator Name
 			cap.setCapability("os_version", "15.6");												//BrowserStack Simulator OS info
 			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST);	//BowserStack Type of Automation Reference

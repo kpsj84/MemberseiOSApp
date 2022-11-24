@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import IOSPageObjects.LoginOptionPage;
+import IOSPageObjects.RegisterPage;
 
 public class iRegisterFormValidationTest extends IBase {
 	
@@ -14,7 +15,12 @@ public class iRegisterFormValidationTest extends IBase {
 		
 		LoginOptionPage lop = new LoginOptionPage(driver);
 		lop.Register().click();
+		Thread.sleep(1000);
 		
+		RegisterPage rp = new RegisterPage(driver);
+		rp.email().click();
+		Thread.sleep(3000);
+		driver.findElementByXPath("//XCUIElementTypeStaticText[@name='Sign up']").click();
 		driver.findElementByXPath("//XCUIElementTypeOther[@name=\"Continue\"]").click();
 		
 		String ValidateEmail = driver.findElementByXPath("//XCUIElementTypeStaticText[@name=\"Email is required\"]").getText();
