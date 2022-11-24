@@ -12,15 +12,13 @@
     		<classes>
       			<class name="Memberse.IOSAutomation.iSmokeTest"/>
       			<class name="Memberse.IOSAutomation.iRegisterFormValidationTest"/>
-      			
       			<class name="Memberse.IOSAutomation.iEmailFormValidationTest"/>
-      			<class name="Memberse.IOSAutomation.iLoginWithEmailTest"/>
       			
+      			<class name="Memberse.IOSAutomation.iRegisterWithEmailTest"/> 
+      			<class name="Memberse.IOSAutomation.iLoginWithEmailTest"/>
       			<class name="Memberse.IOSAutomation.iLoginWithAppleTest"/>
       			<class name="Memberse.IOSAutomation.iLoginWithGoogleTest"/>
       			<class name="Memberse.IOSAutomation.iLoginWithFacebookTest"/>
-      			
-      			<class name="Memberse.IOSAutomation.iRegisterWithEmailTest"/>  
       			<class name="Memberse.IOSAutomation.iLogoutTest"/>    			
     </classes>
   </test> <!-- Test -->

@@ -21,5 +21,33 @@ public class RegisterPage {
 	public WebElement email(){    
 		return email;
 	}
+	
+	@iOSXCUITFindBy(xpath="(//XCUIElementTypeOther[@name=\"Password\"])[2]/XCUIElementTypeTextField") 
+	private WebElement password;
+	
+	public WebElement password(){    
+		return password;
+	}
+	
+	@iOSXCUITFindBy(xpath="(//XCUIElementTypeOther[@name=\"Confirm Password\"])[2]/XCUIElementTypeTextField") 
+	private WebElement confirmPassword;
+	
+	public WebElement confirmPassword(){    
+		return confirmPassword;
+	}
+	
+	@iOSXCUITFindBy(iOSClassChain = "**/XCUIElementTypeOther[`label == 'Agree to Terms and Conditions'`][1]/XCUIElementTypeOther[1]") 
+	private WebElement termsCheckbox;
+	
+	public WebElement termsCheckbox(){    
+		return termsCheckbox;
+	}
+	
+	@iOSXCUITFindBy(xpath="//XCUIElementTypeOther[@name=\"Continue\"]") 
+	private WebElement continueButton;
+	
+	public WebElement continueButton(){    
+		return continueButton;
+	}
 
 }

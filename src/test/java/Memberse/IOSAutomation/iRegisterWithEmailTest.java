@@ -10,6 +10,9 @@ import IOSPageObjects.AppMenus;
 import IOSPageObjects.LoginOptionPage;
 import IOSPageObjects.ProfileMenuPage;
 
+import io.appium.java_client.ios.IOSTouchAction;
+import io.appium.java_client.touch.offset.PointOption;
+
 public class iRegisterWithEmailTest extends IBase{
 	
 	@Test
@@ -19,13 +22,13 @@ public class iRegisterWithEmailTest extends IBase{
 		
 		LoginOptionPage lop = new LoginOptionPage(driver);
 		lop.Register().click();
+		Thread.sleep(1000);
 		
 		String autoString = getSaltString();
 		String emailDomain = "@yopmail.com";
 		String email = autoString+emailDomain;
 		String password = "12345";
 		
-		Thread.sleep(1000);
 		driver.findElementByXPath("(//XCUIElementTypeOther[@name=\"Email\"])[3]/XCUIElementTypeTextField").sendKeys(email);
 		driver.findElementByXPath("//XCUIElementTypeStaticText[@name=\"Sign up\"]").click();
 		driver.findElementByXPath("(//XCUIElementTypeOther[@name=\"Password\"])[2]/XCUIElementTypeOther[2]").click();
@@ -34,7 +37,17 @@ public class iRegisterWithEmailTest extends IBase{
 		driver.findElementByXPath("(//XCUIElementTypeOther[@name=\"Confirm Password\"])[2]/XCUIElementTypeOther[2]").click();
 		driver.findElementByXPath("(//XCUIElementTypeOther[@name=\"Confirm Password\"])[3]/XCUIElementTypeTextField").sendKeys(password);
 		driver.findElementByXPath("//XCUIElementTypeStaticText[@name=\"Sign up\"]").click();
+		Thread.sleep(1000);
+		driver.findElementByXPath("//XCUIElementTypeOther[@name=\"Continue\"]").click();
 		Thread.sleep(2000);
+		driver.findElementByXPath("//XCUIElementTypeButton[@name=\"OK\"]").click();
+		Thread.sleep(1000);
+		
+		IOSTouchAction t = new IOSTouchAction(driver);
+		@SuppressWarnings("rawtypes")
+		PointOption Coordinates = PointOption.point(42,544);
+		t.press(Coordinates).perform();
+		
 		driver.findElementByXPath("//XCUIElementTypeOther[@name=\"Continue\"]").click();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		
@@ -57,7 +70,7 @@ public class iRegisterWithEmailTest extends IBase{
 		System.out.println("Expected Vs Actual is: "+ email + " Vs " + VerifyEmail);
 		System.out.println(email + " Register Test Passed");
 	}
-	
+
 	public String getSaltString() {
         String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         StringBuilder salt = new StringBuilder();

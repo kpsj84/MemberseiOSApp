@@ -14,6 +14,7 @@ public class iEmailFormValidationTest extends IBase {
 		
 		LoginOptionPage lop = new LoginOptionPage(driver);
 		lop.loginButton().click();
+		Thread.sleep(1000);
 		
 		String ValidateEmail = driver.findElementByXPath("//XCUIElementTypeStaticText[@name=\"Email is required\"]").getText();
 		System.out.println(ValidateEmail);

@@ -1,710 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="16" total="25" passed="1" failed="8" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-18T13:54:15 IST" name="Suite" finished-at="2022-11-18T14:01:25 IST" duration-ms="429457">
+  <suite started-at="2022-11-24T15:11:49 IST" name="Default suite" finished-at="2022-11-24T15:14:16 IST" duration-ms="147208">
     <groups>
     </groups>
-    <test started-at="2022-11-18T13:54:15 IST" name="Test" finished-at="2022-11-18T14:01:25 IST" duration-ms="429457">
-      <class name="Memberse.IOSAutomation.iLoginWithEmailTest">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:Memberse.IOSAutomation.iLoginWithEmailTest@6da21078]" started-at="2022-11-18T13:57:34 IST" name="startDriver" finished-at="2022-11-18T13:57:58 IST" duration-ms="23194" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Memberse.IOSAutomation.iLoginWithEmailTest@6da21078]" started-at="2022-11-18T13:57:58 IST" name="beforeMethod" finished-at="2022-11-18T13:57:58 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="iLoginwithEmailTestCase()[pri:0, instance:Memberse.IOSAutomation.iLoginWithEmailTest@6da21078]" started-at="2022-11-18T13:57:58 IST" name="iLoginwithEmailTestCase" finished-at="2022-11-18T13:58:09 IST" duration-ms="10995" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: By.chained({By.xpath: //*[@name='Log in']})]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.xpath: //*[@name='Log in']})
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.click(<generated>)
-at Memberse.IOSAutomation.IUtilities.Direct2LoginOptionPage(IUtilities.java:109)
-at Memberse.IOSAutomation.iLoginWithEmailTest.iLoginwithEmailTestCase(iLoginWithEmailTest.java:15)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@6a10b263 (tried for 1 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-... 32 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //*[@name='Log in']})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Kamals-MacBook-Pro.local', ip: 'fe80:0:0:0:c60:41f8:5238:ada6%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
-Driver info: driver.version: IOSDriver
-at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 34 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- iLoginwithEmailTestCase -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Memberse.IOSAutomation.iLoginWithEmailTest@6da21078]" started-at="2022-11-18T13:58:09 IST" name="afterMethod" finished-at="2022-11-18T13:58:09 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Memberse.IOSAutomation.iLoginWithEmailTest@6da21078]" started-at="2022-11-18T13:58:09 IST" name="quitDriver" finished-at="2022-11-18T13:58:10 IST" duration-ms="1504" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-      </class> <!-- Memberse.IOSAutomation.iLoginWithEmailTest -->
-      <class name="Memberse.IOSAutomation.iLoginWithAppleTest">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:Memberse.IOSAutomation.iLoginWithAppleTest@7fee8714]" started-at="2022-11-18T13:58:10 IST" name="startDriver" finished-at="2022-11-18T13:58:34 IST" duration-ms="24400" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Memberse.IOSAutomation.iLoginWithAppleTest@7fee8714]" started-at="2022-11-18T13:58:34 IST" name="beforeMethod" finished-at="2022-11-18T13:58:34 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="iLoginWithAppleTestCase()[pri:0, instance:Memberse.IOSAutomation.iLoginWithAppleTest@7fee8714]" started-at="2022-11-18T13:58:34 IST" name="iLoginWithAppleTestCase" finished-at="2022-11-18T13:58:52 IST" duration-ms="17671" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: By.chained({By.IosClassChain: **/XCUIElementTypeOther[`label == "Login Email Password Forgot Password? Login OR New to Memberse? Register"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[1]})]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.IosClassChain: **/XCUIElementTypeOther[`label == "Login Email Password Forgot Password? Login OR New to Memberse? Register"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[1]})
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.click(<generated>)
-at Memberse.IOSAutomation.iLoginWithAppleTest.iLoginWithAppleTestCase(iLoginWithAppleTest.java:16)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@451f87af (tried for 1 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-... 31 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.IosClassChain: **/XCUIElementTypeOther[`label == "Login Email Password Forgot Password? Login OR New to Memberse? Register"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[1]})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Kamals-MacBook-Pro.local', ip: 'fe80:0:0:0:c60:41f8:5238:ada6%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
-Driver info: driver.version: IOSDriver
-at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 33 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- iLoginWithAppleTestCase -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Memberse.IOSAutomation.iLoginWithAppleTest@7fee8714]" started-at="2022-11-18T13:58:52 IST" name="quitDriver" finished-at="2022-11-18T13:58:53 IST" duration-ms="1200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Memberse.IOSAutomation.iLoginWithAppleTest@7fee8714]" started-at="2022-11-18T13:58:52 IST" name="afterMethod" finished-at="2022-11-18T13:58:52 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- Memberse.IOSAutomation.iLoginWithAppleTest -->
-      <class name="Memberse.IOSAutomation.iLoginWithFacebookTest">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:Memberse.IOSAutomation.iLoginWithFacebookTest@56cdfb3b]" started-at="2022-11-18T13:59:36 IST" name="startDriver" finished-at="2022-11-18T13:59:58 IST" duration-ms="22772" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Memberse.IOSAutomation.iLoginWithFacebookTest@56cdfb3b]" started-at="2022-11-18T13:59:58 IST" name="beforeMethod" finished-at="2022-11-18T13:59:58 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="iLoginWithFacebookTestCase()[pri:0, instance:Memberse.IOSAutomation.iLoginWithFacebookTest@56cdfb3b]" started-at="2022-11-18T13:59:58 IST" name="iLoginWithFacebookTestCase" finished-at="2022-11-18T14:00:16 IST" duration-ms="17319" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: By.chained({By.IosClassChain: **/XCUIElementTypeOther[`label == "Login Email Password Forgot Password? Login OR New to Memberse? Register"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[3]})]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.IosClassChain: **/XCUIElementTypeOther[`label == "Login Email Password Forgot Password? Login OR New to Memberse? Register"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[3]})
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.click(<generated>)
-at Memberse.IOSAutomation.iLoginWithFacebookTest.iLoginWithFacebookTestCase(iLoginWithFacebookTest.java:15)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@c3177d5 (tried for 1 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-... 31 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.IosClassChain: **/XCUIElementTypeOther[`label == "Login Email Password Forgot Password? Login OR New to Memberse? Register"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[3]})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Kamals-MacBook-Pro.local', ip: 'fe80:0:0:0:c60:41f8:5238:ada6%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
-Driver info: driver.version: IOSDriver
-at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 33 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- iLoginWithFacebookTestCase -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Memberse.IOSAutomation.iLoginWithFacebookTest@56cdfb3b]" started-at="2022-11-18T14:00:16 IST" name="afterMethod" finished-at="2022-11-18T14:00:16 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Memberse.IOSAutomation.iLoginWithFacebookTest@56cdfb3b]" started-at="2022-11-18T14:00:16 IST" name="quitDriver" finished-at="2022-11-18T14:00:17 IST" duration-ms="1505" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-      </class> <!-- Memberse.IOSAutomation.iLoginWithFacebookTest -->
-      <class name="Memberse.IOSAutomation.iRegisterFormValidationTest">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:Memberse.IOSAutomation.iRegisterFormValidationTest@28f2a10f]" started-at="2022-11-18T13:56:20 IST" name="startDriver" finished-at="2022-11-18T13:56:45 IST" duration-ms="25003" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startDriver -->
-        <test-method signature="iRegisterFormValidationTestCase()[pri:0, instance:Memberse.IOSAutomation.iRegisterFormValidationTest@28f2a10f]" started-at="2022-11-18T13:56:45 IST" name="iRegisterFormValidationTestCase" finished-at="2022-11-18T13:56:56 IST" duration-ms="10615" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: By.chained({By.xpath: //*[@name='Log in']})]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.xpath: //*[@name='Log in']})
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.click(<generated>)
-at Memberse.IOSAutomation.IUtilities.Direct2LoginOptionPage(IUtilities.java:109)
-at Memberse.IOSAutomation.iRegisterFormValidationTest.iRegisterFormValidationTestCase(iRegisterFormValidationTest.java:13)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@17ca8b92 (tried for 1 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-... 32 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //*[@name='Log in']})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Kamals-MacBook-Pro.local', ip: 'fe80:0:0:0:c60:41f8:5238:ada6%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
-Driver info: driver.version: IOSDriver
-at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 34 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- iRegisterFormValidationTestCase -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Memberse.IOSAutomation.iRegisterFormValidationTest@28f2a10f]" started-at="2022-11-18T13:56:45 IST" name="beforeMethod" finished-at="2022-11-18T13:56:45 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Memberse.IOSAutomation.iRegisterFormValidationTest@28f2a10f]" started-at="2022-11-18T13:56:56 IST" name="quitDriver" finished-at="2022-11-18T13:56:57 IST" duration-ms="1317" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Memberse.IOSAutomation.iRegisterFormValidationTest@28f2a10f]" started-at="2022-11-18T13:56:56 IST" name="afterMethod" finished-at="2022-11-18T13:56:56 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- Memberse.IOSAutomation.iRegisterFormValidationTest -->
-      <class name="Memberse.IOSAutomation.iSmokeTest">
-        <test-method is-config="true" signature="startService()[pri:0, instance:Memberse.IOSAutomation.iSmokeTest@47faa49c]" started-at="2022-11-18T13:54:15 IST" name="startService" finished-at="2022-11-18T13:54:15 IST" duration-ms="27" status="PASS">
+    <test started-at="2022-11-24T15:11:49 IST" name="Default test" finished-at="2022-11-24T15:14:16 IST" duration-ms="147208">
+      <class name="Memberse.IOSAutomation.iRegisterWithEmailTest">
+        <test-method is-config="true" signature="startService()[pri:0, instance:Memberse.IOSAutomation.iRegisterWithEmailTest@130e116b]" started-at="2022-11-24T15:11:49 IST" name="startService" finished-at="2022-11-24T15:11:51 IST" duration-ms="2076" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startService -->
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:Memberse.IOSAutomation.iSmokeTest@47faa49c]" started-at="2022-11-18T13:54:15 IST" name="startDriver" finished-at="2022-11-18T13:54:55 IST" duration-ms="40361" status="PASS">
+        <test-method is-config="true" signature="startDriver()[pri:0, instance:Memberse.IOSAutomation.iRegisterWithEmailTest@130e116b]" started-at="2022-11-24T15:11:51 IST" name="startDriver" finished-at="2022-11-24T15:12:02 IST" duration-ms="10724" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Memberse.IOSAutomation.iSmokeTest@47faa49c]" started-at="2022-11-18T13:54:55 IST" name="beforeMethod" finished-at="2022-11-18T13:54:55 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Memberse.IOSAutomation.iRegisterWithEmailTest@130e116b]" started-at="2022-11-24T15:12:02 IST" name="beforeMethod" finished-at="2022-11-24T15:12:02 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="iTutorialSwipeTestCase()[pri:0, instance:Memberse.IOSAutomation.iSmokeTest@47faa49c]" started-at="2022-11-18T13:54:56 IST" name="iTutorialSwipeTestCase" finished-at="2022-11-18T13:56:19 IST" duration-ms="83136" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- iTutorialSwipeTestCase -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Memberse.IOSAutomation.iSmokeTest@47faa49c]" started-at="2022-11-18T13:56:19 IST" name="afterMethod" finished-at="2022-11-18T13:56:19 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Memberse.IOSAutomation.iSmokeTest@47faa49c]" started-at="2022-11-18T13:56:19 IST" name="quitDriver" finished-at="2022-11-18T13:56:20 IST" duration-ms="1738" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-        <test-method is-config="true" signature="stopService()[pri:0, instance:Memberse.IOSAutomation.iSmokeTest@47faa49c]" started-at="2022-11-18T14:01:25 IST" name="stopService" finished-at="2022-11-18T14:01:25 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- stopService -->
-      </class> <!-- Memberse.IOSAutomation.iSmokeTest -->
-      <class name="Memberse.IOSAutomation.iRegisterWithEmailTest">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:Memberse.IOSAutomation.iRegisterWithEmailTest@2b91004a]" started-at="2022-11-18T14:00:17 IST" name="startDriver" finished-at="2022-11-18T14:00:34 IST" duration-ms="16431" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Memberse.IOSAutomation.iRegisterWithEmailTest@2b91004a]" started-at="2022-11-18T14:00:34 IST" name="beforeMethod" finished-at="2022-11-18T14:00:34 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="iRegisterWithEmailTestCase()[pri:0, instance:Memberse.IOSAutomation.iRegisterWithEmailTest@2b91004a]" started-at="2022-11-18T14:00:34 IST" name="iRegisterWithEmailTestCase" finished-at="2022-11-18T14:00:45 IST" duration-ms="11139" status="FAIL">
+        <test-method signature="iRegisterWithEmailTestCase()[pri:0, instance:Memberse.IOSAutomation.iRegisterWithEmailTest@130e116b]" started-at="2022-11-24T15:12:02 IST" name="iRegisterWithEmailTestCase" finished-at="2022-11-24T15:13:15 IST" duration-ms="73255" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Can't locate an element by this strategy: By.chained({By.xpath: //*[@name='Log in']})]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.xpath: //*[@name='Log in']})
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.click(<generated>)
-at Memberse.IOSAutomation.IUtilities.Direct2LoginOptionPage(IUtilities.java:109)
-at Memberse.IOSAutomation.iRegisterWithEmailTest.iRegisterWithEmailTestCase(iRegisterWithEmailTest.java:18)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@43da41e (tried for 1 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-... 32 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //*[@name='Log in']})
+              <![CDATA[An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Kamals-MacBook-Pro.local', ip: 'fe80:0:0:0:c60:41f8:5238:ada6%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
-Driver info: driver.version: IOSDriver
-at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 34 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- iRegisterWithEmailTestCase -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Memberse.IOSAutomation.iRegisterWithEmailTest@2b91004a]" started-at="2022-11-18T14:00:45 IST" name="afterMethod" finished-at="2022-11-18T14:00:45 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Memberse.IOSAutomation.iRegisterWithEmailTest@2b91004a]" started-at="2022-11-18T14:00:45 IST" name="quitDriver" finished-at="2022-11-18T14:00:47 IST" duration-ms="2019" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-      </class> <!-- Memberse.IOSAutomation.iRegisterWithEmailTest -->
-      <class name="Memberse.IOSAutomation.iLoginWithGoogleTest">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:Memberse.IOSAutomation.iLoginWithGoogleTest@4229bb3f]" started-at="2022-11-18T13:58:53 IST" name="startDriver" finished-at="2022-11-18T13:59:17 IST" duration-ms="24110" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Memberse.IOSAutomation.iLoginWithGoogleTest@4229bb3f]" started-at="2022-11-18T13:59:17 IST" name="beforeMethod" finished-at="2022-11-18T13:59:17 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="iLoginWithGoogleTestCase()[pri:0, instance:Memberse.IOSAutomation.iLoginWithGoogleTest@4229bb3f]" started-at="2022-11-18T13:59:17 IST" name="iLoginWithGoogleTestCase" finished-at="2022-11-18T13:59:34 IST" duration-ms="16786" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: By.chained({By.IosClassChain: **/XCUIElementTypeOther[`label == "Login Email Password Forgot Password? Login OR New to Memberse? Register"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[2]})]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.IosClassChain: **/XCUIElementTypeOther[`label == "Login Email Password Forgot Password? Login OR New to Memberse? Register"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[2]})
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.click(<generated>)
-at Memberse.IOSAutomation.iLoginWithGoogleTest.iLoginWithGoogleTestCase(iLoginWithGoogleTest.java:18)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@1f51431 (tried for 1 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-... 31 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.IosClassChain: **/XCUIElementTypeOther[`label == "Login Email Password Forgot Password? Login OR New to Memberse? Register"`][2]/XCUIElementTypeOther[6]/XCUIElementTypeOther[2]})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Kamals-MacBook-Pro.local', ip: 'fe80:0:0:0:c60:41f8:5238:ada6%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
-Driver info: driver.version: IOSDriver
-at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 33 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- iLoginWithGoogleTestCase -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Memberse.IOSAutomation.iLoginWithGoogleTest@4229bb3f]" started-at="2022-11-18T13:59:34 IST" name="afterMethod" finished-at="2022-11-18T13:59:34 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Memberse.IOSAutomation.iLoginWithGoogleTest@4229bb3f]" started-at="2022-11-18T13:59:34 IST" name="quitDriver" finished-at="2022-11-18T13:59:36 IST" duration-ms="1255" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-      </class> <!-- Memberse.IOSAutomation.iLoginWithGoogleTest -->
-      <class name="Memberse.IOSAutomation.iEmailFormValidationTest">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:Memberse.IOSAutomation.iEmailFormValidationTest@f736069]" started-at="2022-11-18T13:56:57 IST" name="startDriver" finished-at="2022-11-18T13:57:22 IST" duration-ms="24564" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Memberse.IOSAutomation.iEmailFormValidationTest@f736069]" started-at="2022-11-18T13:57:22 IST" name="beforeMethod" finished-at="2022-11-18T13:57:22 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="iEmailFormValidationTestCase()[pri:0, instance:Memberse.IOSAutomation.iEmailFormValidationTest@f736069]" started-at="2022-11-18T13:57:22 IST" name="iEmailFormValidationTestCase" finished-at="2022-11-18T13:57:33 IST" duration-ms="11002" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Can't locate an element by this strategy: By.chained({By.xpath: //*[@name='Log in']})]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.xpath: //*[@name='Log in']})
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-at io.appium.java_client.ios.IOSElement$$EnhancerByCGLIB$$d311658.click(<generated>)
-at Memberse.IOSAutomation.IUtilities.Direct2LoginOptionPage(IUtilities.java:109)
-at Memberse.IOSAutomation.iEmailFormValidationTest.iEmailFormValidationTestCase(iEmailFormValidationTest.java:13)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@29314cc9 (tried for 1 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-... 32 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //*[@name='Log in']})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Kamals-MacBook-Pro.local', ip: 'fe80:0:0:0:c60:41f8:5238:ada6%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
-Driver info: driver.version: IOSDriver
-at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 34 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- iEmailFormValidationTestCase -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Memberse.IOSAutomation.iEmailFormValidationTest@f736069]" started-at="2022-11-18T13:57:33 IST" name="afterMethod" finished-at="2022-11-18T13:57:33 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Memberse.IOSAutomation.iEmailFormValidationTest@f736069]" started-at="2022-11-18T13:57:33 IST" name="quitDriver" finished-at="2022-11-18T13:57:34 IST" duration-ms="1493" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-      </class> <!-- Memberse.IOSAutomation.iEmailFormValidationTest -->
-      <class name="Memberse.IOSAutomation.iLogoutTest">
-        <test-method is-config="true" signature="startDriver()[pri:0, instance:Memberse.IOSAutomation.iLogoutTest@20ccf40b]" started-at="2022-11-18T14:00:47 IST" name="startDriver" finished-at="2022-11-18T14:01:11 IST" duration-ms="24197" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startDriver -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Memberse.IOSAutomation.iLogoutTest@20ccf40b]" started-at="2022-11-18T14:01:11 IST" name="beforeMethod" finished-at="2022-11-18T14:01:11 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="iLogoutTestCase()[pri:0, instance:Memberse.IOSAutomation.iLogoutTest@20ccf40b]" started-at="2022-11-18T14:01:11 IST" name="iLogoutTestCase" finished-at="2022-11-18T14:01:23 IST" duration-ms="11654" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Kamals-MacBook-Pro.local', ip: 'fe80:0:0:0:c60:41f8:5238:ada6%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+System info: host: 'Kamals-MacBook-Pro.local', ip: 'fe80:0:0:0:10a7:47d6:a60a:db84%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
 Driver info: io.appium.java_client.ios.IOSDriver
-Capabilities {64bit: false, acceptSslCert: false, acceptSslCerts: false, automationName: XCuiTest, bootstrapPath: /usr/local/.browserstack/co..., browserName: , browserstack.appium_version: 1.21.0, browserstack.isTargetBased: false, browserstack.is_hub_canary: false, browserstack.minOSVersion: 11.0, bundleID: dog.fa.so.app, bundleId: dog.fa.so.app, capabilities: {64bit: false, acceptSslCert: false, acceptSslCerts: false, automationName: XCuiTest, bootstrapPath: /usr/local/.browserstack/co..., browserName: , browserstack.appium_version: 1.21.0, browserstack.isTargetBased: false, browserstack.is_hub_canary: false, browserstack.minOSVersion: 11.0, bundleID: dog.fa.so.app, bundleId: dog.fa.so.app, custom_replay_kit_params: {"rotation":"false","captur..., databaseEnabled: false, detected_language: selenium/3.141.59 (java mac), device: iphone, deviceName: iPhone 13 Pro, deviceOrientation: PORTRAIT, javascriptEnabled: true, launchTimeout: 180000, locationContextEnabled: false, mobile: {browser: mobile, version: iPhone 13 Pro-15.6}, networkConnectionEnabled: false, newCommandTimeout: 0, new_bucketing: true, noReset: true, orientation: PORTRAIT, orig_os: ios, osVersion: 15.6, os_version: 15.6, platform: MAC, platformName: iOS, realMobile: true, safariIgnoreFraudWarning: true, safariInitialUrl: http://mobile-internet-chec..., sessionId: c9981431cbc34b24d1b1d368cfd..., takesScreenshot: true, udid: 00008110-0019599A1A7A801E, uiautomator2ServerLaunchTimeout: 60000, useXctestrunFile: true, version: , waitForQuiescence: false, wdaStartupRetries: 3, wda_port: 8403, webStorageEnabled: false, webkitResponseTimeout: 20000}, custom_replay_kit_params: {"rotation":"false","captur..., databaseEnabled: false, detected_language: selenium/3.141.59 (java mac), device: iphone, deviceName: iPhone 13 Pro, deviceOrientation: PORTRAIT, javascriptEnabled: true, launchTimeout: 180000, locationContextEnabled: false, mobile: {browser: mobile, version: iPhone 13 Pro-15.6}, networkConnectionEnabled: false, newCommandTimeout: 0, new_bucketing: true, noReset: true, orientation: PORTRAIT, orig_os: ios, osVersion: 15.6, os_version: 15.6, platform: MAC, platformName: iOS, realMobile: true, safariIgnoreFraudWarning: true, safariInitialUrl: http://mobile-internet-chec..., sessionId: c9981431cbc34b24d1b1d368cfd..., takesScreenshot: true, udid: 00008110-0019599A1A7A801E, uiautomator2ServerLaunchTimeout: 60000, useXctestrunFile: true, version: , waitForQuiescence: false, wdaStartupRetries: 3, wda_port: 8403, webStorageEnabled: false, webkitResponseTimeout: 20000}
-Session ID: c9981431cbc34b24d1b1d368cfd06e2f725f54ba
-*** Element info: {Using=accessibility id, value=Don’t Allow}]]>
+Capabilities {app: /Users/kamaljhinjer/Documen..., automationName: XCuiTest, browserName: , chromedriverExecutable: /Users/kamaljhinjer/Documen..., databaseEnabled: false, deviceName: iPhone, javascriptEnabled: true, launchTimeout: 180000, locationContextEnabled: false, networkConnectionEnabled: false, newCommandTimeout: 180, platform: MAC, platformName: IOS, platformVersion: 15.6, takesScreenshot: true, udid: 00008101-000808921AB8001E, updateWDABundlId: dog.fa.so.app, webStorageEnabled: false, xcodeOrgId: CGYHFCCU8D, xcodeSigningId: iPhone Developer}
+Session ID: 252a6bde-c9c1-4aeb-adb6-3a9f40229a00
+*** Element info: {Using=xpath, value=//*[@text='Next']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Kamals-MacBook-Pro.local', ip: 'fe80:0:0:0:c60:41f8:5238:ada6%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
+System info: host: 'Kamals-MacBook-Pro.local', ip: 'fe80:0:0:0:10a7:47d6:a60a:db84%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '15.0.1'
 Driver info: io.appium.java_client.ios.IOSDriver
-Capabilities {64bit: false, acceptSslCert: false, acceptSslCerts: false, automationName: XCuiTest, bootstrapPath: /usr/local/.browserstack/co..., browserName: , browserstack.appium_version: 1.21.0, browserstack.isTargetBased: false, browserstack.is_hub_canary: false, browserstack.minOSVersion: 11.0, bundleID: dog.fa.so.app, bundleId: dog.fa.so.app, capabilities: {64bit: false, acceptSslCert: false, acceptSslCerts: false, automationName: XCuiTest, bootstrapPath: /usr/local/.browserstack/co..., browserName: , browserstack.appium_version: 1.21.0, browserstack.isTargetBased: false, browserstack.is_hub_canary: false, browserstack.minOSVersion: 11.0, bundleID: dog.fa.so.app, bundleId: dog.fa.so.app, custom_replay_kit_params: {"rotation":"false","captur..., databaseEnabled: false, detected_language: selenium/3.141.59 (java mac), device: iphone, deviceName: iPhone 13 Pro, deviceOrientation: PORTRAIT, javascriptEnabled: true, launchTimeout: 180000, locationContextEnabled: false, mobile: {browser: mobile, version: iPhone 13 Pro-15.6}, networkConnectionEnabled: false, newCommandTimeout: 0, new_bucketing: true, noReset: true, orientation: PORTRAIT, orig_os: ios, osVersion: 15.6, os_version: 15.6, platform: MAC, platformName: iOS, realMobile: true, safariIgnoreFraudWarning: true, safariInitialUrl: http://mobile-internet-chec..., sessionId: c9981431cbc34b24d1b1d368cfd..., takesScreenshot: true, udid: 00008110-0019599A1A7A801E, uiautomator2ServerLaunchTimeout: 60000, useXctestrunFile: true, version: , waitForQuiescence: false, wdaStartupRetries: 3, wda_port: 8403, webStorageEnabled: false, webkitResponseTimeout: 20000}, custom_replay_kit_params: {"rotation":"false","captur..., databaseEnabled: false, detected_language: selenium/3.141.59 (java mac), device: iphone, deviceName: iPhone 13 Pro, deviceOrientation: PORTRAIT, javascriptEnabled: true, launchTimeout: 180000, locationContextEnabled: false, mobile: {browser: mobile, version: iPhone 13 Pro-15.6}, networkConnectionEnabled: false, newCommandTimeout: 0, new_bucketing: true, noReset: true, orientation: PORTRAIT, orig_os: ios, osVersion: 15.6, os_version: 15.6, platform: MAC, platformName: iOS, realMobile: true, safariIgnoreFraudWarning: true, safariInitialUrl: http://mobile-internet-chec..., sessionId: c9981431cbc34b24d1b1d368cfd..., takesScreenshot: true, udid: 00008110-0019599A1A7A801E, uiautomator2ServerLaunchTimeout: 60000, useXctestrunFile: true, version: , waitForQuiescence: false, wdaStartupRetries: 3, wda_port: 8403, webStorageEnabled: false, webkitResponseTimeout: 20000}
-Session ID: c9981431cbc34b24d1b1d368cfd06e2f725f54ba
-*** Element info: {Using=accessibility id, value=Don’t Allow}
+Capabilities {app: /Users/kamaljhinjer/Documen..., automationName: XCuiTest, browserName: , chromedriverExecutable: /Users/kamaljhinjer/Documen..., databaseEnabled: false, deviceName: iPhone, javascriptEnabled: true, launchTimeout: 180000, locationContextEnabled: false, networkConnectionEnabled: false, newCommandTimeout: 180, platform: MAC, platformName: IOS, platformVersion: 15.6, takesScreenshot: true, udid: 00008101-000808921AB8001E, updateWDABundlId: dog.fa.so.app, webStorageEnabled: false, xcodeOrgId: CGYHFCCU8D, xcodeSigningId: iPhone Developer}
+Session ID: 252a6bde-c9c1-4aeb-adb6-3a9f40229a00
+*** Element info: {Using=xpath, value=//*[@text='Next']}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
@@ -715,8 +58,11 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
 at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
-at io.appium.java_client.FindsByAccessibilityId.findElementByAccessibilityId(FindsByAccessibilityId.java:37)
-at Memberse.IOSAutomation.iLogoutTest.iLogoutTestCase(iLogoutTest.java:18)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+at io.appium.java_client.ios.IOSDriver.findElementByXPath(IOSDriver.java:1)
+at Memberse.IOSAutomation.iRegisterWithEmailTest.iRegisterWithEmailTestCase(iRegisterWithEmailTest.java:56)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -750,16 +96,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- iLogoutTestCase -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Memberse.IOSAutomation.iLogoutTest@20ccf40b]" started-at="2022-11-18T14:01:23 IST" name="afterMethod" finished-at="2022-11-18T14:01:23 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- iRegisterWithEmailTestCase -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Memberse.IOSAutomation.iRegisterWithEmailTest@130e116b]" started-at="2022-11-24T15:13:15 IST" name="afterMethod" finished-at="2022-11-24T15:13:15 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Memberse.IOSAutomation.iLogoutTest@20ccf40b]" started-at="2022-11-18T14:01:23 IST" name="quitDriver" finished-at="2022-11-18T14:01:25 IST" duration-ms="1948" status="PASS">
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Memberse.IOSAutomation.iRegisterWithEmailTest@130e116b]" started-at="2022-11-24T15:13:15 IST" name="quitDriver" finished-at="2022-11-24T15:13:16 IST" duration-ms="1054" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-      </class> <!-- Memberse.IOSAutomation.iLogoutTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        <test-method is-config="true" signature="stopService()[pri:0, instance:Memberse.IOSAutomation.iRegisterWithEmailTest@130e116b]" started-at="2022-11-24T15:13:16 IST" name="stopService" finished-at="2022-11-24T15:14:16 IST" duration-ms="60061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopService -->
+      </class> <!-- Memberse.IOSAutomation.iRegisterWithEmailTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -14,8 +14,8 @@ public class iLoginWithEmailTest extends IBase{
 		IUtilities u = new IUtilities(driver);
 		u.Direct2LoginOptionPage();
 		
-		String userNumber = "c2";
-		String emailId = "kqatest"+userNumber;
+		String userNumber = "creator";
+		String emailId = "kqa"+userNumber;
 		String emailDomain = "@yopmail.com";
 		String email = emailId+emailDomain;
 		String password = emailId;
@@ -27,8 +27,10 @@ public class iLoginWithEmailTest extends IBase{
 		lop.emailPassword().click();
 		lop.emailPassword().sendKeys(password);
 		lop.LoginText().click();
+		driver.hideKeyboard();
 		lop.loginButton().click();
-		Thread.sleep(6000);
+		lop.loginButton().click();
+		Thread.sleep(7000);
 		
 		AppMenus am = new AppMenus(driver);
 		am.ProfileMenu().click();
