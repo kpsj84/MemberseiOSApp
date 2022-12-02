@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Memberse.IOSAutomation.iRegisterWithEmailTest">
+      <class name="Memberse.IOSAutomation.iLoginWithEmailTest">
         <methods>
           <include name="quitDriver"/>
+          <include name="iLoginwithEmailTestCase"/>
           <include name="startService"/>
           <include name="beforeMethod"/>
           <include name="startDriver"/>
           <include name="stopService"/>
           <include name="afterMethod"/>
-          <include name="iRegisterWithEmailTestCase"/>
         </methods>
-      </class> <!-- Memberse.IOSAutomation.iRegisterWithEmailTest -->
+      </class> <!-- Memberse.IOSAutomation.iLoginWithEmailTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

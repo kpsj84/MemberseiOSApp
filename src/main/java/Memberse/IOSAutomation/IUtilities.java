@@ -120,7 +120,7 @@ public class IUtilities {
 			finally
 			{
 				System.out.println("Wait for application to load, It may take few seconds to perform first action");
-				Thread.sleep(10000);
+				Thread.sleep(20000);
 			}
 			
 			WelcomePage wp = new WelcomePage(localdriver);

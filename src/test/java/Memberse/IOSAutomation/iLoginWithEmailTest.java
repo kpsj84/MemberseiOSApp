@@ -29,7 +29,6 @@ public class iLoginWithEmailTest extends IBase{
 		lop.LoginText().click();
 		driver.hideKeyboard();
 		lop.loginButton().click();
-		lop.loginButton().click();
 		Thread.sleep(7000);
 		
 		AppMenus am = new AppMenus(driver);
