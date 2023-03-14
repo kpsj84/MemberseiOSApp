@@ -166,7 +166,7 @@ public class IBase {
 				cap = new DesiredCapabilities();
 				cap.setCapability("browserstack.user", "kamal_BOZ8Ie");									//BrowserStack User Key
 				cap.setCapability("browserstack.key", "FJzpiZvMvStzQQNzQHdD");							//BrowserStack Password Key
-				//cap.setCapability("app", "bs://77fec00777fc89be3b248e533b1df214a313110d");			//BrowserStack uploaded App reference -> QA build-5.1.2(45)
+				//cap.setCapability("app", "bs://77fec00777fc89be3b248e533b1df214a313110d");			//BrowserStack uploaded App reference -> QA build-5.1.3(48)
 				//cap.setCapability("app", "bs://0e40e8d451b489c4c75e85492af9c8e94a6edbee");			//BrowserStack uploaded App reference for sample App
 				cap.setCapability("app", "MemberseiOSApp");												//This is use of customd_id, Uploaded QA build-35
 				//cap.setCapability("app", "kamal_BOZ8Ie/MemberseiOSApp");								//This is use of shareable_is, If team member to test this app w/o password credentials
